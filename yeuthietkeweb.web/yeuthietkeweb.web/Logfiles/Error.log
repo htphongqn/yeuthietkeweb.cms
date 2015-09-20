@@ -1,0 +1,208 @@
+[Date 20/09/2015 09:19:11]
+System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: <htphongqn@gmail.com>, Recipient unknown
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at GiaNguyen.UIs.Toolbar.SendEmailSMTP(String strSubject, String toAddress, String ccAddress, String bccAddress, String body, Boolean isHtml, Boolean isSSL) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\Toolbar.ascx.cs:line 97
+-----------------------------------------------
+[Date 20/09/2015 01:20:43]
+System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: <htphongqn@gmail.com>, Recipient unknown
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at GiaNguyen.UIs.Toolbar.SendEmailSMTP(String strSubject, String toAddress, String ccAddress, String bccAddress, String body, Boolean isHtml, Boolean isSSL) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\Toolbar.ascx.cs:line 97
+-----------------------------------------------
+[Date 20/09/2015 01:19:00]
+System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: <htphongqn@gmail.com>, Recipient unknown
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at GiaNguyen.UIs.Toolbar.SendEmailSMTP(String strSubject, String toAddress, String ccAddress, String bccAddress, String body, Boolean isHtml, Boolean isSSL) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\Toolbar.ascx.cs:line 97
+-----------------------------------------------
+[Date 20/09/2015 01:17:20]
+System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: <htphongqn@live.com>, Recipient unknown
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at GiaNguyen.UIs.Toolbar.SendEmailSMTP(String strSubject, String toAddress, String ccAddress, String bccAddress, String body, Boolean isHtml, Boolean isSSL) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\Toolbar.ascx.cs:line 97
+-----------------------------------------------
+[Date 20/09/2015 01:13:45]
+System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: <htphongqn@live.com>, Recipient unknown
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at GiaNguyen.UIs.Toolbar.SendEmailSMTP(String strSubject, String toAddress, String ccAddress, String bccAddress, String body, Boolean isHtml, Boolean isSSL) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\Toolbar.ascx.cs:line 97
+-----------------------------------------------
+[Date 20/09/2015 01:07:26]
+System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: <htphongqn@gmail.com>, Recipient unknown
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at GiaNguyen.UIs.Toolbar.SendEmailSMTP(String strSubject, String toAddress, String ccAddress, String bccAddress, String body, Boolean isHtml, Boolean isSSL) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\Toolbar.ascx.cs:line 97
+-----------------------------------------------
+[Date 17/09/2015 11:50:42]
+System.Web.HttpException (0x80004005): DataBinding: 'Model.ESHOP_CATEGORy' does not contain a property with the name 'NEWS_URL'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.uis_main_ascx.__DataBind__control7(Object sender, EventArgs e) in e:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx:line 19
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at THVDev.UIs.main.Load_Tinnoibat() in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx.cs:line 60
+-----------------------------------------------
+[Date 17/09/2015 11:50:42]
+System.Web.HttpException (0x80004005): DataBinding: 'Model.ESHOP_CATEGORy' does not contain a property with the name 'NEWS_TITLE'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.uis_main_ascx.__DataBind__control4(Object sender, EventArgs e) in e:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx:line 8
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at THVDev.UIs.main.Load_Khuyenmai() in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx.cs:line 32
+-----------------------------------------------
+[Date 17/09/2015 11:49:04]
+System.Web.HttpException (0x80004005): DataBinding: 'Model.ESHOP_CATEGORy' does not contain a property with the name 'NEWS_URL'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.uis_main_ascx.__DataBind__control7(Object sender, EventArgs e) in e:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx:line 19
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at THVDev.UIs.main.Load_Tinnoibat() in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx.cs:line 60
+-----------------------------------------------
+[Date 17/09/2015 11:49:04]
+System.Web.HttpException (0x80004005): DataBinding: 'Model.ESHOP_CATEGORy' does not contain a property with the name 'NEWS_TITLE'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.uis_main_ascx.__DataBind__control4(Object sender, EventArgs e) in e:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx:line 8
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at THVDev.UIs.main.Load_Khuyenmai() in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx.cs:line 32
+-----------------------------------------------
+[Date 17/09/2015 11:48:11]
+System.Web.HttpException (0x80004005): DataBinding: 'Model.ESHOP_CATEGORy' does not contain a property with the name 'NEWS_URL'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.uis_main_ascx.__DataBind__control7(Object sender, EventArgs e) in e:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx:line 19
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at THVDev.UIs.main.Load_Tinnoibat() in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx.cs:line 60
+-----------------------------------------------
+[Date 17/09/2015 11:48:11]
+System.Web.HttpException (0x80004005): DataBinding: 'Model.ESHOP_CATEGORy' does not contain a property with the name 'NEWS_TITLE'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.uis_main_ascx.__DataBind__control4(Object sender, EventArgs e) in e:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx:line 8
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at THVDev.UIs.main.Load_Khuyenmai() in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\UIs\main.ascx.cs:line 32
+-----------------------------------------------
+[Date 17/09/2015 10:51:09]
+System.Web.HttpParseException (0x80004005): Could not load type 'THVDev.UIs.SearchResult'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'THVDev.UIs.SearchResult'. ---> System.Web.HttpException (0x80004005): Could not load type 'THVDev.UIs.SearchResult'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at System.Web.UI.TemplateControl.LoadControl(String virtualPath)
+   at THVDev.Page_Default.Page_Load(Object sender, EventArgs e) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\vi-vn\Page_Default.aspx.cs:line 34
+-----------------------------------------------
+[Date 15/09/2015 12:37:54]
+System.Web.HttpParseException (0x80004005): Could not load type 'THVDev.UIs.SearchResult'. ---> System.Web.HttpParseException (0x80004005): Could not load type 'THVDev.UIs.SearchResult'. ---> System.Web.HttpException (0x80004005): Could not load type 'THVDev.UIs.SearchResult'.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at System.Web.UI.TemplateControl.LoadControl(String virtualPath)
+   at THVDev.Page_Default.Page_Load(Object sender, EventArgs e) in E:\WWW\dichvuviettel.com.vn\dichvuviettel.com.vn\GiaNguyen\vi-vn\Page_Default.aspx.cs:line 34
+-----------------------------------------------
