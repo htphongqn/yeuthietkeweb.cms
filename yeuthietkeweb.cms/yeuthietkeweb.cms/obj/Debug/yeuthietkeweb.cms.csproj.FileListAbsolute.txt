@@ -1,0 +1,14 @@
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\bin\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\bin\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\obj\Debug\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\UploadFileKetoan\obj\Debug\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\UploadFileKetoan.dll
+E:\WWW\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\UploadFileKetoan.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
