@@ -509,6 +509,13 @@
     <Compile Include="App_Code\FileRepo.cs" />
     <Compile Include="App_Code\UploadRepo.cs" />
     <Compile Include="App_Code\UserTypeRepo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="master\Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -608,10 +615,6 @@
     <Compile Include="App_Code\Security.cs" />
     <Compile Include="App_Code\UserRepo.cs" />
     <Compile Include="App_Code\Utils.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
