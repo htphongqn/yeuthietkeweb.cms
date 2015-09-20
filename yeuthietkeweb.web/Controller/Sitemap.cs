@@ -11,7 +11,7 @@ namespace Controller
     public class Sitemap
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public List<ESHOP_CATEGORy> Load_sitemap()
         {

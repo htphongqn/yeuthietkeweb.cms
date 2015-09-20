@@ -12,7 +12,7 @@ namespace Controller
     public class Payment_cart
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         Config cf = new Config();
         public string _Mailbody = string.Empty;
         public static int _idorder = 0;

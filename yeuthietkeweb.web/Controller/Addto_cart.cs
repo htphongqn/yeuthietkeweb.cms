@@ -10,7 +10,7 @@ namespace Controller
     public class Addto_cart
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public bool Add_To_Cart(int News_id, object Guid)
         {

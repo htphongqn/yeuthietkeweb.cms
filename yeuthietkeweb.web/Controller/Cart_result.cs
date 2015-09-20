@@ -10,7 +10,7 @@ namespace Controller
     public class Cart_result
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         //Load cart
         public List<Cart_result_entity> Load_cart(Guid _guid)

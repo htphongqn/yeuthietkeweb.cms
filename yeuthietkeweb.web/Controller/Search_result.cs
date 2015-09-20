@@ -12,7 +12,7 @@ namespace Controller
     public class Search_result
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public List<Pro_details_entity> Load_search_result(string _txt,int type)
         {

@@ -43,13 +43,13 @@
   <ItemGroup>
     <Compile Include="Attfile_entity.cs" />
     <Compile Include="Cart_result_entity.cs" />
-    <Compile Include="dbVuonRauViet.cs">
-      <DependentUpon>dbVuonRauViet.dbml</DependentUpon>
+    <Compile Include="dbShop.cs">
+      <DependentUpon>dbShop.dbml</DependentUpon>
     </Compile>
-    <Compile Include="dbVuonRauViet.designer.cs">
+    <Compile Include="dbShop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dbVuonRauViet.dbml</DependentUpon>
+      <DependentUpon>dbShop.dbml</DependentUpon>
     </Compile>
     <Compile Include="Entity_img.cs" />
     <Compile Include="News_details_entity.cs" />
@@ -65,9 +65,9 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="dbVuonRauViet.dbml">
+    <None Include="dbShop.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>dbVuonRauViet.designer.cs</LastGenOutput>
+      <LastGenOutput>dbShop.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -79,8 +79,8 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dbVuonRauViet.dbml.layout">
-      <DependentUpon>dbVuonRauViet.dbml</DependentUpon>
+    <None Include="dbShop.dbml.layout">
+      <DependentUpon>dbShop.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

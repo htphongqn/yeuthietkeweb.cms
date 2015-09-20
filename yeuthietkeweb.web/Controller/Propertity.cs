@@ -12,7 +12,7 @@ namespace Controller
     public class Propertity
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         //Menu
         public List<ESHOP_CATEGORy> Loadmenu(int position, int limit, int rank, int lang, int showfooter)

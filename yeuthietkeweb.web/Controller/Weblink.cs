@@ -10,7 +10,7 @@ namespace Controller
     public class Weblink
     {
         #region Declare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public List<ESHOP_WEBLINK> Loadweblink()
         {

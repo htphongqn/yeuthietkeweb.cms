@@ -10,7 +10,7 @@ namespace Controller
     public class List_product
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public List<Pro_details_entity> Load_listpro(int _Catid)
         {

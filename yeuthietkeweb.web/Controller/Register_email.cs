@@ -9,7 +9,7 @@ namespace Controller
     public class Register_email
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         private bool Checkemail(string email)
         {

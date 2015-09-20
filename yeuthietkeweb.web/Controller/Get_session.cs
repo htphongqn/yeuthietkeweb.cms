@@ -13,7 +13,7 @@ namespace Controller
     public class Get_session
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public void LoadCatInfo(string _catSeoUrl)
         {

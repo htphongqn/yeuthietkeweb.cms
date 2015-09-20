@@ -10,7 +10,7 @@ namespace Controller
     public class List_news
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         #region Entity_result
         #endregion

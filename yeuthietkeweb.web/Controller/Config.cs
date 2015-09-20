@@ -12,7 +12,7 @@ namespace Controller
     public class Config
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         //Config meta
         public List<ESHOP_CONFIG> Config_meta()

@@ -13,7 +13,7 @@ namespace Controller
     public class Product_Details
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public List<Pro_details_entity> Load_Product_Detail(string _News_seo_url)
         {

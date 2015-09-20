@@ -27,24 +27,24 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dataweb_mau;Persist Security Info=True;User ID=sa;Password=123")]
-        public string database_mauConnectionString
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dbShop;Persist Security Info=True;User ID=sa;Password=123")]
+        public string dbShop_ConnectionString
         {
             get
             {
-                return ((string)(this["database_mauConnectionString"]));
+                return ((string)(this["dbShop_ConnectionString"]));
             }
         }
 
         //[global::System.Configuration.ApplicationScopedSettingAttribute()]
         //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         //[global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        //[global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=.\sqlexpress;Initial Catalog=database_mau2;Persist Security Info=True;User ID=sa;Password=123")]
-        //public string database_mauConnectionString
+        //[global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=.\sqlexpress;Initial Catalog=dbShop;Persist Security Info=True;User ID=sa;Password=123")]
+        //public string dbShop_ConnectionString
         //{
         //    get
         //    {
-        //        return ((string)(this["database_mauConnectionString"]));
+        //        return ((string)(this["dbShop_ConnectionString"]));
         //    }
         //}
     }

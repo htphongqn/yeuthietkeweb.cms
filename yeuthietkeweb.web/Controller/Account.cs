@@ -12,7 +12,7 @@ namespace Controller
     public class Account
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public  bool Login(string Email, string MatKhau)
         {

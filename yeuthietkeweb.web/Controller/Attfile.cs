@@ -10,7 +10,7 @@ namespace Controller
     public class Attfile
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public List<Attfile_entity> Load_att(string _news_seo)
         {

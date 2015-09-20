@@ -14,7 +14,7 @@ namespace Controller
     public class Home
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         //Pro or news hien thi trang chu
         public List<Pro_details_entity> Loadindex(int type, int period, int lang, int limit)

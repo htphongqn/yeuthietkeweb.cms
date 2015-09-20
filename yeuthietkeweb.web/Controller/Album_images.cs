@@ -10,7 +10,7 @@ namespace Controller
     public class Album_images
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         //Load tat ca img theo chuyen muc
         public List<Entity_img> Load_album_img(int _Catid)

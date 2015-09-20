@@ -9,7 +9,7 @@ namespace Controller
     public class Comment
     {
         #region Decclare
-        dbVuonRauVietDataContext db = new dbVuonRauVietDataContext();
+        dbShopDataContext db = new dbShopDataContext();
         #endregion
         public bool Addcomment(string desc, int news_id)
         {
