@@ -19,13 +19,13 @@ namespace yeuthietkeweb.cms.pages
         {
             //=== Declare Info===//
             List<InfoData> l = new List<InfoData>();
-            l.Add(new InfoData { Title = "Chuyên mục", Link = "../page/category_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
-            l.Add(new InfoData { Title = "Tin tức", Link = "../page/news_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
-            l.Add(new InfoData { Title = "Hình ảnh", Link = "../page/aditem_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
-            l.Add(new InfoData { Title = "Hỗ trợ trực tuyến", Link = "../page/online_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
-            l.Add(new InfoData { Title = "Liên hệ", Link = "../page/contact_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
-            l.Add(new InfoData { Title = "Quản trị", Link = "../page/user_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
-            l.Add(new InfoData { Title = "Cấu hình", Link = "../page/config_meta.aspx", Icon = "fa-support", Color = "panel-red" });
+            l.Add(new InfoData { Title = "Chuyên mục", Link = "../pages/category_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
+            l.Add(new InfoData { Title = "Tin tức", Link = "../pages/news_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
+            l.Add(new InfoData { Title = "Hình ảnh", Link = "../pages/aditem_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
+            l.Add(new InfoData { Title = "Hỗ trợ trực tuyến", Link = "../pages/online_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
+            l.Add(new InfoData { Title = "Liên hệ", Link = "../pages/contact_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
+            l.Add(new InfoData { Title = "Quản trị", Link = "../pages/user_list.aspx", Icon = "fa-tasks", Color = "panel-green" });
+            l.Add(new InfoData { Title = "Cấu hình", Link = "../pages/config_meta.aspx", Icon = "fa-support", Color = "panel-red" });
             //=== End Declare Info===//
             for (int i = 0; i < l.Count; i++)
             {
