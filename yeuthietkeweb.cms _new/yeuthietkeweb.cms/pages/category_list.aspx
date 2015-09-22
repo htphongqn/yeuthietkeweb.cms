@@ -165,7 +165,13 @@
      <script>
          $(document).ready(function () {
              $('#dataTables-example').DataTable({
-                 responsive: true
+                 responsive: true,
+                 aoColumnDefs: [
+                  {
+                      bSortable: false,
+                      aTargets: [1]
+                  }
+                ]
              });
          });
     </script>
