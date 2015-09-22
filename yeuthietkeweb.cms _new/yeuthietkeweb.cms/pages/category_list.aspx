@@ -28,13 +28,13 @@
                             <table id="tblFilter">
                                 <tr>
                                     <td>
-                                        <a href="category.aspx" class="btn btn-default form-control">Thêm mới</a>
+                                        <a href="category.aspx" class="btn btn-default btn-success btn-sm">Thêm mới</a>
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-default form-control" OnClick="lbtSave_Click">Lưu</asp:LinkButton>
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-default btn-success btn-sm" OnClick="lbtSave_Click">Lưu</asp:LinkButton>
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="lbtDelete" runat="server" OnClientClick="return confirm('Bạn có chắc chắn xóa không?');" CssClass="btn btn-default form-control"
+                                        <asp:LinkButton ID="lbtDelete" runat="server" OnClientClick="return confirm('Bạn có chắc chắn xóa không?');" CssClass="btn btn-default btn-success btn-sm"
                                             CausesValidation="false" OnClick="lbtDelete_Click">Xóa</asp:LinkButton>
                                     </td>
                                 </tr>
@@ -43,8 +43,8 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>STT</th>
-                                    <th>#</th>
+                                    <th class="center">STT</th>
+                                    <th class="center">#</th>
                                     <th>Tên chuyên mục</th>
                                     <th>Vị trí</th>
                                     <th>Thứ tự</th>
@@ -61,7 +61,7 @@
                                                 <%# getOrder() %>
                                                 <asp:Label ID="lblID" runat="server" Text='<%# Eval("CAT_ID")%>' Visible="false"></asp:Label>
                                             </td>
-                                            <td>
+                                            <td class="center">
                                                 <input id="chkSelect" type="checkbox" name="chkSelect" runat="server" style="border-top-style: none;
                                                     border-right-style: none; border-left-style: none; border-bottom-style: none">
                                             </td>
@@ -76,15 +76,15 @@
                                             <td class="center">
                                                 <input type="text" id="txtOrder" runat="server" maxlength="4" size="6" value='<%# DataBinder.Eval(Container.DataItem, "CAT_ORDER") %>'
                                                     onkeyup="this.value=formatNumeric(this.value);" onblur="this.value=formatNumeric(this.value);"
-                                                    name="txtOrder" style="width: 50px;">
+                                                    name="txtOrder" style="width: 50px;text-align:center">
                                             </td>
                                             <td class="center">
                                                 <input type="text" id="txtOrderPeriod" runat="server" maxlength="4" size="6" value='<%# DataBinder.Eval(Container.DataItem, "CAT_PERIOD_ORDER") %>'
                                                     onkeyup="this.value=formatNumeric(this.value);" onblur="this.value=formatNumeric(this.value);"
-                                                    name="txtOrderPeriod" style="width: 50px;">
+                                                    name="txtOrderPeriod" style="width: 50px;text-align:center">
                                             </td>
                                             <td class="center">
-                                                <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CAT_ID")) %>'>Chỉnh sửa</a>
+                                                <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CAT_ID")) %>'><span class="glyphicon glyphicon-pencil"></span></a>
                                             </td>
                                             <td class="center">
                                                 <asp:LinkButton ID="lnkbtnDel" runat="server" CommandName="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa?');">
