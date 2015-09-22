@@ -12,3 +12,8 @@ E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietke
 E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
 E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
 E:\WWW\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.dll
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\bin\yeuthietkeweb.cms.pdb
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.csprojResolveAssemblyReference.cache
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.dll
+H:\SoftWeb\yeuthietkeweb.cms_v1.0\yeuthietkeweb.cms\yeuthietkeweb.cms\obj\Debug\yeuthietkeweb.cms.pdb
