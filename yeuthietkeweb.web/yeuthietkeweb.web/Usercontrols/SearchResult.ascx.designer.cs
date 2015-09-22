@@ -7,27 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace yeuthietkeweb {
+namespace yeuthietkeweb.UIs {
     
     
-    public partial class Default {
+    public partial class SearchResult {
         
         /// <summary>
-        /// ltrFavicon control.
+        /// lbTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrFavicon;
+        protected global::System.Web.UI.WebControls.Label lbTitle;
         
         /// <summary>
-        /// main1 control.
+        /// Rplistnews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::yeuthietkeweb.UIs.main main1;
+        protected global::System.Web.UI.WebControls.Repeater Rplistnews;
+        
+        /// <summary>
+        /// ltrPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrPage;
     }
 }

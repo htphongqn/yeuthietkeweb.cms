@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace yeuthietkeweb {
+namespace yeuthietkeweb.vi_vn {
     
     
-    public partial class Default {
+    public partial class cart_result {
         
         /// <summary>
         /// ltrFavicon control.
@@ -22,12 +22,30 @@ namespace yeuthietkeweb {
         protected global::System.Web.UI.WebControls.Literal ltrFavicon;
         
         /// <summary>
-        /// main1 control.
+        /// Rpgiohang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::yeuthietkeweb.UIs.main main1;
+        protected global::System.Web.UI.WebControls.Repeater Rpgiohang;
+        
+        /// <summary>
+        /// Lbtotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbtotal;
+        
+        /// <summary>
+        /// Lbcapnhap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Lbcapnhap;
     }
 }

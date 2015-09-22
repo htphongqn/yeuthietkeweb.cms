@@ -29,7 +29,7 @@ namespace GiaNguyen.Components
         public void SendMail_ChangePassword(string Email, int OID, string Code_Active)
         {
 
-            string link = System.Configuration.ConfigurationManager.AppSettings["URLWebsite"] + "/vi-vn/doi-mat-khau.aspx?code=" + Code_Active + "&id=" + OID;
+            string link = System.Configuration.ConfigurationManager.AppSettings["URLWebsite"] + "/Resources/doi-mat-khau.aspx?code=" + Code_Active + "&id=" + OID;
             string strBody = "<html>"
                       + "<P>Xin chào,</P>"
                       + "<P> Để thay đổi mật khẩu vui lòng nhấp vào link sau : <a href=" + link + "> " + link + "</a>"

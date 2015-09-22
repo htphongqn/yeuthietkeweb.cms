@@ -10,7 +10,7 @@
 namespace yeuthietkeweb {
     
     
-    public partial class Default {
+    public partial class Main {
         
         /// <summary>
         /// ltrFavicon control.
@@ -22,12 +22,12 @@ namespace yeuthietkeweb {
         protected global::System.Web.UI.WebControls.Literal ltrFavicon;
         
         /// <summary>
-        /// main1 control.
+        /// phdMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::yeuthietkeweb.UIs.main main1;
+        protected global::System.Web.UI.WebControls.PlaceHolder phdMain;
     }
 }

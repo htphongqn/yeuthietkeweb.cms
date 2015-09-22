@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteVI.master.cs" Inherits="yeuthietkeweb.Master.SiteVI" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@ Register src="../Usercontrols/header.ascx" tagname="header" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/top_menu.ascx" tagname="top_menu" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/silde_main.ascx" tagname="silde_main" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/side_left.ascx" tagname="side_left" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/side_right.ascx" tagname="side_right" tagprefix="uc1" %>
+<%@ Register src="../Usercontrols/Footer.ascx" tagname="Footer" tagprefix="uc1" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/Resources/styles/styles.css"/>
+    <script type="text/javascript" src="/Resources/scripts/jquery.min.1.11.2.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>        
+</head>
+<body>
+    <form id="form1" runat="server">
+    <uc1:header ID="header1" runat="server" />
+    <uc1:top_menu ID="top_menu1" runat="server" />
+    <uc1:silde_main ID="silde_main1" runat="server" />
+    <main class="main" role="main">
+      <div class="container">
+        <uc1:side_left ID="side_left1" runat="server" />
+        <asp:ContentPlaceHolder ID="ContentRight" runat="server">
+        </asp:ContentPlaceHolder>
+        <uc1:side_right ID="side_right1" runat="server" />
+      </div>
+    </main>
+    <uc1:Footer ID="Footer1" runat="server" />
+    <script type="text/javascript" src="/Resources/scripts/bxslider.js"></script> 
+    <script type="text/javascript" src="/Resources/scripts/js.js"></script> 
+    <script type="text/javascript" src="/Resources/scripts/jquery.nivo.slider.js"></script> 
+    <script src="/Resources/scripts/wow.js"></script> 
+    <script>
+        new WOW().init();
+    </script> 
+    <script src="/Resources/scripts/jquery.mousewheel.min.js"></script> 
+    <script src="/Resources/scripts/jquery.simplr.smoothscroll.min.js"></script> 
+    <script>
+        $.srSmoothscroll({
+            step: 100,
+            speed: 500
+        });
+     </script>
+     <script>
+         $().UItoTop({});
+    </script>
+    <div id="fb-root"></div>
+    <script>                (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));</script>
+    </form>
+</body>
+</html>

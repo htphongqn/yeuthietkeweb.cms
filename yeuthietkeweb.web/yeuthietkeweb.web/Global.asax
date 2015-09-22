@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="THVDev.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="yeuthietkeweb.Global" Language="C#" %>

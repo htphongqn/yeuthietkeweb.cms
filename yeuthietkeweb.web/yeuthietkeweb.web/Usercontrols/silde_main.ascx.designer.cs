@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace yeuthietkeweb {
+namespace yeuthietkeweb.UIs {
     
     
-    public partial class Default {
+    public partial class silde_main {
         
         /// <summary>
-        /// ltrFavicon control.
+        /// rptAds control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrFavicon;
-        
-        /// <summary>
-        /// main1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::yeuthietkeweb.UIs.main main1;
+        protected global::System.Web.UI.WebControls.Repeater rptAds;
     }
 }

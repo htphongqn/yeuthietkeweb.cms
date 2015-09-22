@@ -7,27 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace yeuthietkeweb {
+namespace yeuthietkeweb.UIs {
     
     
-    public partial class Default {
+    public partial class side_left {
         
         /// <summary>
-        /// ltrFavicon control.
+        /// rptSupport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrFavicon;
+        protected global::System.Web.UI.WebControls.Repeater rptSupport;
         
         /// <summary>
-        /// main1 control.
+        /// rptMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::yeuthietkeweb.UIs.main main1;
+        protected global::System.Web.UI.WebControls.Repeater rptMenu;
+        
+        /// <summary>
+        /// rptAds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptAds;
     }
 }

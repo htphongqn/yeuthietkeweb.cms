@@ -7,7 +7,7 @@ using System.Web.SessionState;
 using vpro.functions;
 using Controller;
 
-namespace THVDev
+namespace yeuthietkeweb
 {
     public class Global : System.Web.HttpApplication
     {

@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/SiteVI.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="THVDev.Default" %>
-<%@ Register src="UIs/main.ascx" tagname="main" tagprefix="uc1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masterpages/SiteVI.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="yeuthietkeweb.Default" %>
+<%@ Register src="Usercontrols/main.ascx" tagname="main" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal ID="ltrFavicon" runat="server" EnableViewState="false"></asp:Literal>
 </asp:Content>
