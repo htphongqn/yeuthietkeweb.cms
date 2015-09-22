@@ -170,6 +170,14 @@
                   {
                       bSortable: false,
                       aTargets: [1]
+                  },
+                  {
+                      bSortable: false,
+                      aTargets: [6]
+                  },
+                  {
+                      bSortable: false,
+                      aTargets: [7]
                   }
                 ]
              });

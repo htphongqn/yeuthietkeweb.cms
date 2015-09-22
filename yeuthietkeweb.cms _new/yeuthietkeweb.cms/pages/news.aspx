@@ -1,5 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Site.Master" AutoEventWireup="true" CodeBehind="news.aspx.cs" Inherits="yeuthietkeweb.cms.pages.news" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<script type="text/javascript" language="javascript">
+    new jQueryCollapse($("#seo"), {
+        query: 'div h2'
+    });
+
+    new jQueryCollapse($("#dvPrice"), {
+        query: 'div h2'
+    });
+
+    function ParseText(objsent) {
+        ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrl'));
+        document.getElementById('ContentMain_txtSeoTitle').value = objsent.value;
+        document.getElementById('ContentMain_txtSeoKeyword').value = objsent.value;
+    }
+    function ParseDesc(objsent) {
+        document.getElementById('ContentMain_txtSeoDescription').value = objsent.value;
+    }
+    function ParseTextEn(objsent) {
+        ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrlEn'));
+        document.getElementById('ContentMain_txtSeoTitleEn').value = objsent.value;
+        document.getElementById('ContentMain_txtSeoKeywordEn').value = objsent.value;
+    }
+    function ParseDescEn(objsent) {
+        document.getElementById('ContentMain_txtSeoDescriptionEn').value = objsent.value;
+    }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentMain" runat="server">
     <div class="row">
@@ -189,117 +215,6 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
     <script src="../js/jquery.min.1.7.2.js" type="text/javascript"></script>
     <script src="../js/JqueryCollapse/jquery.collapse.js" type="text/javascript"></script>
-    <script type="text/javascript" language="javascript">
-        new jQueryCollapse($("#seo"), {
-            query: 'div h2'
-        });
-
-        new jQueryCollapse($("#dvPrice"), {
-            query: 'div h2'
-        });
-
-        function ParseText(objsent) {
-            ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrl'));
-            document.getElementById('ContentMain_txtSeoTitle').value = objsent.value;
-            document.getElementById('ContentMain_txtSeoKeyword').value = objsent.value;
-        }
-        function ParseDesc(objsent) {
-            document.getElementById('ContentMain_txtSeoDescription').value = objsent.value;
-        }
-        function ParseTextEn(objsent) {
-            ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrlEn'));
-            document.getElementById('ContentMain_txtSeoTitleEn').value = objsent.value;
-            document.getElementById('ContentMain_txtSeoKeywordEn').value = objsent.value;
-        }
-        function ParseDescEn(objsent) {
-            document.getElementById('ContentMain_txtSeoDescriptionEn').value = objsent.value;
-        }
-    </script>
-    <script type="text/javascript" language="javascript">
-        function ToggleAll(e, action) {
-            if (e.checked) {
-                CheckAll();
-            }
-            else {
-                ClearAll();
-            }
-        }
-
-        function CheckAll() {
-            var ml = document.forms[0];
-            var len = ml.elements.length;
-            for (var i = 1; i < len; i++) {
-                var e = ml.elements[i];
-
-                if (e.name.toString().indexOf("chkSelect") > 0)
-                    e.checked = true;
-            }
-            ml.ContentMain_GridItemList_toggleSelect.checked = true;
-        }
-
-        function ClearAll() {
-            var ml = document.forms[0];
-            var len = ml.elements.length;
-            for (var i = 1; i < len; i++) {
-                var e = ml.elements[i];
-                if (e.name.toString().indexOf("chkSelect") > 0)
-                    e.checked = false;
-            }
-            ml.ContentMain_GridItemList_toggleSelect.checked = false;
-        }
-
-        function selectChange() {
-            var radioButtons = document.getElementsByName("rblType");
-            for (var x = 0; x < radioButtons.length; x++) {
-                if (radioButtons[x].checked) {
-                    if (radioButtons[x].value == 1)
-                    { CheckAll(); }
-                }
-            }
-
-        }
-
-        function ToggleAll1(e, action) {
-            if (e.checked1) {
-                CheckAll1();
-            }
-            else {
-                ClearAll1();
-            }
-        }
-
-        function CheckAll1() {
-            var ml = document.forms[0];
-            var len = ml.elements.length;
-            for (var i = 1; i < len; i++) {
-                var e = ml.elements[i];
-
-                if (e.name.toString().indexOf("chkSelect1") > 0)
-                    e.checked1 = true;
-            }
-            ml.ContentMain_DataGridSize_toggleSelect.checked1 = true;
-        }
-
-        function ClearAll1() {
-            var ml = document.forms[0];
-            var len = ml.elements.length;
-            for (var i = 1; i < len; i++) {
-                var e = ml.elements[i];
-                if (e.name.toString().indexOf("chkSelect1") > 0)
-                    e.checked1 = false;
-            }
-            ml.ContentMain_DataGridSize_toggleSelect.checked1 = false;
-        }
-
-        function selectChange() {
-            var radioButtons = document.getElementsByName("rblType");
-            for (var x = 0; x < radioButtons.length; x++) {
-                if (radioButtons[x].checked1) {
-                    if (radioButtons[x].value == 1)
-                    { CheckAll(); }
-                }
-            }
-
-        }              
-    </script>
+    
+   
 </asp:Content>

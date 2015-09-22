@@ -1,5 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Site.Master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="yeuthietkeweb.cms.pages.category" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<script language="javascript" type="text/javascript">
+    new jQueryCollapse($("#seo"), {
+        query: 'div h2'
+    });
+
+    function ParseText(objsent) {
+        ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrl'));
+        document.getElementById('ContentMain_txtSeoTitle').value = objsent.value;
+        document.getElementById('ContentMain_txtSeoKeyword').value = objsent.value;
+        //document.getElementById('MainContent_txtSeoDescription').value = objsent.value;
+    }
+    function ParseTextEn(objsent) {
+        ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrlEn'));
+        document.getElementById('ContentMain_txtSeoTitleEn').value = objsent.value;
+        document.getElementById('ContentMain_txtSeoKeywordEn').value = objsent.value;
+        //document.getElementById('MainContent_txtSeoDescription').value = objsent.value;
+    }
+    function ParseDesc(objsent) {
+        document.getElementById('ContentMain_txtSeoDescription').value = objsent.value;
+    }
+    function ParseDescEn(objsent) {
+        document.getElementById('ContentMain_txtSeoDescriptionEn').value = objsent.value;
+    }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentMain" runat="server">
 <div class="row">
@@ -166,28 +190,4 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
     <script src="../js/jquery.min.1.7.2.js" type="text/javascript"></script>
     <script src="../js/JqueryCollapse/jquery.collapse.js" type="text/javascript"></script>
-    <script language="javascript" type="text/javascript">
-        new jQueryCollapse($("#seo"), {
-            query: 'div h2'
-        });
-
-        function ParseText(objsent) {
-            ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrl'));
-            document.getElementById('ContentMain_txtSeoTitle').value = objsent.value;
-            document.getElementById('ContentMain_txtSeoKeyword').value = objsent.value;
-            //document.getElementById('MainContent_txtSeoDescription').value = objsent.value;
-        }
-        function ParseTextEn(objsent) {
-            ParseUrl(objsent, document.getElementById('ContentMain_txtSeoUrlEn'));
-            document.getElementById('ContentMain_txtSeoTitleEn').value = objsent.value;
-            document.getElementById('ContentMain_txtSeoKeywordEn').value = objsent.value;
-            //document.getElementById('MainContent_txtSeoDescription').value = objsent.value;
-        }
-        function ParseDesc(objsent) {
-            document.getElementById('ContentMain_txtSeoDescription').value = objsent.value;
-        }
-        function ParseDescEn(objsent) {
-            document.getElementById('ContentMain_txtSeoDescriptionEn').value = objsent.value;
-        }
-    </script>
 </asp:Content>
