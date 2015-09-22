@@ -55,7 +55,7 @@
                                         <tr class="odd gradeX">
                                             <td class="center">
                                                 <%# getOrder() %>
-                                                <asp:Label ID="lblID" runat="server" Text='<%# Eval("CAT_ID")%>' Visible="false"></asp:Label>
+                                                <asp:Label ID="lblID" runat="server" Text='<%# Eval("CONTACT_ID")%>' Visible="false"></asp:Label>
                                             </td>
                                             <td>
                                                 <input id="chkSelect" type="checkbox" name="chkSelect" runat="server" style="border-top-style: none;
