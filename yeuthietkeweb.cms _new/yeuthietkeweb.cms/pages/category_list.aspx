@@ -8,6 +8,53 @@
             padding:5px;
         }
     </style>
+    <script language="javascript">
+				<!--
+        function ToggleAll(e, action) {
+            if (e.checked) {
+                CheckAll();
+            }
+            else {
+                ClearAll();
+            }
+        }
+
+        function CheckAll() {
+            var ml = document.forms[0];
+            var len = ml.elements.length;
+            for (var i = 1; i < len; i++) {
+                var e = ml.elements[i];
+
+                if (e.name.toString().indexOf("chkSelect") > 0)
+                    e.checked = true;
+            }
+            ml.MainContent_GridItemList_toggleSelect.checked = true;
+        }
+
+        function ClearAll() {
+            var ml = document.forms[0];
+            var len = ml.elements.length;
+            for (var i = 1; i < len; i++) {
+                var e = ml.elements[i];
+                if (e.name.toString().indexOf("chkSelect") > 0)
+                    e.checked = false;
+            }
+            ml.MainContent_GridItemList_toggleSelect.checked = false;
+        }
+
+        function selectChange() {
+            var radioButtons = document.getElementsByName("rblType");
+            for (var x = 0; x < radioButtons.length; x++) {
+                if (radioButtons[x].checked) {
+                    if (radioButtons[x].value == 1)
+                    { CheckAll(); }
+                }
+            }
+
+        }
+				    
+				// -->
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentMain" runat="server">
     <div class="row">
@@ -44,13 +91,16 @@
                             <thead>
                                 <tr>
                                     <th class="center">STT</th>
-                                    <th class="center">#</th>
+                                    <th class="center">
+                                        <input type="checkbox" id="toggleSelect" runat="server" onclick="javascript: ToggleAll(this,0);"
+                                            name="toggleSign">
+                                    </th>
                                     <th>Tên chuyên mục</th>
                                     <th>Vị trí</th>
                                     <th>Thứ tự</th>
                                     <th>Thứ tự trang chủ</th>
-                                    <th>#</th>
-                                    <th>Xóa</th>
+                                    <th class="center">Sửa</th>
+                                    <th class="center">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>                                

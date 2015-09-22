@@ -22,7 +22,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="fa fa-table fa-fw"></i>Tin tức<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-table fa-fw"></i>Bài viết<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li><a href="news_list.aspx">Danh sách bài viết</a></li>
                     <li><a href="news.aspx">Thêm mới bài viết</a></li>

@@ -28,27 +28,29 @@
                             <table id="tblFilter">
                                 <tr>
                                     <td>
-                                        <a href="news.aspx" class="btn btn-default form-control">Thêm mới</a>
-                                    </td>
-                                    <td>
-                                        <asp:LinkButton ID="lbtDelete" runat="server" OnClientClick="return confirm('Bạn có chắc chắn xóa không?');" CssClass="btn btn-default form-control"
+                                        <a href="news.aspx" class="btn btn-default btn-success btn-sm">Thêm mới</a>
+                                        <asp:LinkButton ID="lbtDelete" runat="server" OnClientClick="return confirm('Bạn có chắc chắn xóa không?');" CssClass="btn btn-default btn-success btn-sm"
                                             CausesValidation="false" OnClick="lbtDelete_Click">Xóa</asp:LinkButton>
                                     </td>
                                     <td>
-                                        <div id="click">
+                                        
+                                    </td>
+                                </tr>
+                                <tr>                                
+                                    <td>
+                                        <%--<div id="click">
                                             <asp:LinkButton ID="lbtSearch" runat="server" OnClick="lbtSearch_Click">Tìm kiếm </asp:LinkButton>
-                                        </div>
-                                        <div style="padding-left: 100px; color: Red;">
-                                            <strong>Lọc Theo : </strong>
-                                            <asp:DropDownList ID="Ddnguon" runat="server" AutoPostBack="True" OnSelectedIndexChanged="Change_nguon" Visible="false">
-                                                <asp:ListItem Value="-1">---- Chọn ----</asp:ListItem>
-                                                <asp:ListItem Text="Tin tức" Value="0"></asp:ListItem>
-                                                <%--<asp:ListItem Text="Dịch vụ" Value="1"></asp:ListItem>
-                                                <asp:ListItem Text="Hình ảnh" Value="2"></asp:ListItem>--%>
-                                            </asp:DropDownList>
-                                            <asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="True" OnSelectedIndexChanged="Drchuyenmuc_SelectedIndexChanged">
-                                            </asp:DropDownList>
-                                        </div>
+                                        </div>--%>
+                                        <asp:DropDownList ID="Ddnguon" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="Change_nguon">
+                                            <asp:ListItem Value="-1">---- Chọn loại tin----</asp:ListItem>
+                                            <asp:ListItem Text="Tin tức" Value="0"></asp:ListItem>
+                                            <%--<asp:ListItem Text="Dịch vụ" Value="1"></asp:ListItem>
+                                            <asp:ListItem Text="Hình ảnh" Value="2"></asp:ListItem>--%>
+                                        </asp:DropDownList>
+                                    </td>
+                                    <td>                                        
+                                        <asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="Drchuyenmuc_SelectedIndexChanged">
+                                        </asp:DropDownList>
                                     </td>
                                 </tr>
                             </table>
@@ -56,14 +58,14 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>STT</th>
-                                    <th>#</th>
+                                    <th class="center">STT</th>
+                                    <th class="center">#</th>
                                     <th>Tiêu đề</th>
                                     <th>Trạng thái</th>
                                     <th>Thứ tự</th>
                                     <th>Ngày tạo</th>
-                                    <th>#</th>
-                                    <th>Xóa</th>
+                                    <th class="center">Sửa</th>
+                                    <th class="center">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>                                
@@ -74,7 +76,7 @@
                                                 <%# getOrder()%>
                                                 <asp:Label ID="lblID" runat="server" Text='<%# Eval("NEWS_ID")%>' Visible="false"></asp:Label>
                                             </td>
-                                            <td>
+                                            <td class="center">
                                                 <input id="chkSelect" type="checkbox" name="chkSelect" runat="server" style="border-top-style: none;
                                                     border-right-style: none; border-left-style: none; border-bottom-style: none">
                                             </td>
@@ -93,7 +95,7 @@
                                                 <%# getDate(DataBinder.Eval(Container.DataItem, "NEWS_PUBLISHDATE"))%>
                                             </td>
                                             <td class="center">
-                                                <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "NEWS_ID")) %>'>Chỉnh sửa</a>
+                                                <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "NEWS_ID")) %>'><span class="glyphicon glyphicon-pencil"></span></a>
                                             </td>
                                             <td class="center">
                                                 <asp:LinkButton ID="lnkbtnDel" runat="server" CommandName="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa?');">
