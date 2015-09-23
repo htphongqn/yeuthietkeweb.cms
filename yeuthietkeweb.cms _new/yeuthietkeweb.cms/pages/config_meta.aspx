@@ -79,20 +79,20 @@
                         <asp:HyperLink runat="server" ID="hplFile" Target="_blank"></asp:HyperLink><br />
                         <asp:Literal EnableViewState="false" runat="server" ID="ltrImage"></asp:Literal>
                     </div>
+                    <div class="form-group">
+                        <label>Chọn màu hover</label>
+                        <cc1:ColorPicker ID="ColorPicker1" runat="server"/>
+                    </div>
                     <div class="form-group" id="trUploadBG" runat="server">
                         <label>Background</label>
                         <input id="fileImageBG" type="file" name="fileImageBG" size="50" runat="server" class="form-control">
                     </div>
                     <div class="form-group" id="trFileBG" runat="server">
                         <asp:ImageButton ID="btnDeleteBG" runat="server" ImageUrl="../images/delete_icon.gif"
-                            BorderWidth="0" Width="13px" ToolTip="Xóa file đính kèm" OnClick="btnDeleteBG_Click">
+                            BorderWidth="0" Width="13px" CausesValidation="false" ToolTip="Xóa file đính kèm" OnClick="btnDeleteBG_Click">
                         </asp:ImageButton>
                         <asp:HyperLink runat="server" ID="hplFileBG" Target="_blank"></asp:HyperLink><br />
                         <asp:Literal EnableViewState="false" runat="server" ID="ltrImageBG"></asp:Literal>
-                    </div>
-                    <div class="form-group">
-                        <label>Chọn màu hover</label>
-                        <cc1:ColorPicker ID="ColorPicker1" runat="server"/>
                     </div>
                 </div>
             </div>

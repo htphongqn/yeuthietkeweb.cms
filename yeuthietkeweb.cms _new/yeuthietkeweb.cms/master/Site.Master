@@ -33,6 +33,10 @@
         {
             font-size:12px;
         }
+        table input
+        {
+            min-height:21px
+        }
     </style>
 </head>
 <body>

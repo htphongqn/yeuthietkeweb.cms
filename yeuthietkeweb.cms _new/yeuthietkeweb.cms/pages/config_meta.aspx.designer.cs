@@ -193,6 +193,15 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.WebControls.Literal ltrImage;
         
         /// <summary>
+        /// ColorPicker1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Karpach.WebControls.ColorPicker ColorPicker1;
+        
+        /// <summary>
         /// trUploadBG control.
         /// </summary>
         /// <remarks>
@@ -245,14 +254,5 @@ namespace yeuthietkeweb.cms.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrImageBG;
-        
-        /// <summary>
-        /// ColorPicker1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Karpach.WebControls.ColorPicker ColorPicker1;
     }
 }
