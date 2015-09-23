@@ -9,7 +9,7 @@ using System.Web.UI.HtmlControls;
 
 namespace yeuthietkeweb.cms.pages
 {
-    public partial class contact_list : System.Web.UI.Page
+    public partial class config_email_list : System.Web.UI.Page
     {
         #region Declare
 
@@ -17,6 +17,27 @@ namespace yeuthietkeweb.cms.pages
         dbShopDataContext DB = new dbShopDataContext();
 
         #endregion
+
+        #region properties
+
+        public SortDirection sortProperty
+        {
+            get
+            {
+                if (ViewState["SortingState"] == null)
+                {
+                    ViewState["SortingState"] = SortDirection.Ascending;
+                }
+                return (SortDirection)ViewState["SortingState"];
+            }
+            set
+            {
+                ViewState["SortingState"] = value;
+            }
+        }
+
+        #endregion
+
         #region Page Events
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,6 +46,7 @@ namespace yeuthietkeweb.cms.pages
             {
                 SearchResult();
             }
+
         }
 
         #endregion
@@ -37,18 +59,20 @@ namespace yeuthietkeweb.cms.pages
             return _count.ToString();
         }
 
+        public string getLink(object obj_id)
+        {
+            return "config_email.aspx?email_id=" + Utils.CStrDef(obj_id);
+        }
+
         private void SearchResult()
         {
             try
             {
-                var AllList = (from g in DB.ESHOP_CONTACTs
-                               where g.CONTACT_TYPE != 1
-                               orderby g.CONTACT_PUBLISHDATE descending
-                               select g);
+                var AllList = DB.ESHOP_EMAILs.ToList();
 
 
                 if (AllList.ToList().Count > 0)
-                    Session["ContactList"] = DataUtil.LINQToDataTable(AllList);
+                    Session["EmailList"] = DataUtil.LINQToDataTable(AllList);
 
                 rptList.DataSource = AllList;
                 rptList.DataBind();
@@ -58,27 +82,6 @@ namespace yeuthietkeweb.cms.pages
             catch (Exception ex)
             {
                 clsVproErrorHandler.HandlerError(ex);
-            }
-        }
-
-        private void EventDelete(int _id)
-        {
-            try
-            {
-
-                var g_delete = DB.GetTable<ESHOP_CONTACT>().Where(g => g.CONTACT_ID == _id);
-
-                DB.ESHOP_CONTACTs.DeleteAllOnSubmit(g_delete);
-                DB.SubmitChanges();
-
-            }
-            catch (Exception ex)
-            {
-                clsVproErrorHandler.HandlerError(ex);
-            }
-            finally
-            {
-                Response.Redirect("contact_list.aspx?");
             }
         }
 
@@ -108,8 +111,8 @@ namespace yeuthietkeweb.cms.pages
 
                     if (check.Checked)
                     {
-                        int catId = Utils.CIntDef(lblID.Text, 0);
-                        items[j] = catId;
+                        int _Id = Utils.CIntDef(lblID.Text, 0);
+                        items[j] = _Id;
                         j++;
                     }
 
@@ -117,9 +120,9 @@ namespace yeuthietkeweb.cms.pages
                 }
 
                 //delete 
-                var g_delete = DB.GetTable<ESHOP_CONTACT>().Where(g => items.Contains(g.CONTACT_ID));
+                var g_delete = DB.GetTable<ESHOP_EMAIL>().Where(g => items.Contains(g.EMAIL_ID));
 
-                DB.ESHOP_CONTACTs.DeleteAllOnSubmit(g_delete);
+                DB.ESHOP_EMAILs.DeleteAllOnSubmit(g_delete);
                 DB.SubmitChanges();
             }
             catch (Exception ex)
@@ -134,26 +137,6 @@ namespace yeuthietkeweb.cms.pages
 
         }
 
-        public string getLink(object obj_id)
-        {
-            return "contact.aspx?contact_id=" + Utils.CStrDef(obj_id);
-        }
-
-        #endregion
-
-        #region Grid Events
-
-        protected void rptList_ItemCommand(object source, RepeaterCommandEventArgs e)
-        {
-            LinkButton lnkbtnDel = (LinkButton)e.Item.FindControl("lnkbtnDel");
-            Label lblID = (Label)e.Item.FindControl("lblID");
-
-            int _id = Utils.CIntDef(lblID.Text, 0);
-            if (((LinkButton)e.CommandSource).CommandName == "Delete")
-            {
-                EventDelete(_id);
-            }
-        }
         #endregion
     }
 }
