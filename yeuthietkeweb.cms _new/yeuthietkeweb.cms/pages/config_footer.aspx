@@ -17,33 +17,27 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Thông tin chi tiết
-                </div>
+                    Thông tin tiếng việt
+                </div>                
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-6" style="width:100%;">
-                            <form>
-                                <div class="form-group">
-                                    <label>Thông tin tiếng việt</label>
-                                    <textarea id="mrk" cols="20" rows="10" class="mrk" style="height: 500px;" runat="server"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Thông tin tiếng anh</label>
-                                    <textarea id="mrk1" cols="20" rows="10" class="mrk" style="height: 500px;" runat="server"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- /.col-lg-6 (nested) -->
-
-                        <!-- /.col-lg-6 (nested) -->
-                    </div>
-                    <!-- /.row (nested) -->
+                    <div class="form-group">
+                        <textarea id="mrk" cols="20" rows="10" class="mrk" style="height: 500px;" runat="server"></textarea>
+                    </div>    
                 </div>
-                <!-- /.panel-body -->
             </div>
-            <!-- /.panel -->
         </div>
-        <!-- /.col-lg-12 -->
+        <div class="col-lg-12">
+            <div class="panel panel-default"> 
+                <div class="panel-heading">
+                    Thông tin tiếng anh
+                </div>               
+                <div class="panel-body">
+                    <div class="form-group">
+                        <textarea id="mrk1" cols="20" rows="10" class="mrk" style="height: 500px;" runat="server"></textarea>
+                    </div>   
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
