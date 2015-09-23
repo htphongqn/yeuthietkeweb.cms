@@ -29,7 +29,10 @@
         {
             margin: 4px 4px 4px 4px;    
         }
-
+        table label
+        {
+            font-size:12px;
+        }
     </style>
 </head>
 <body>
