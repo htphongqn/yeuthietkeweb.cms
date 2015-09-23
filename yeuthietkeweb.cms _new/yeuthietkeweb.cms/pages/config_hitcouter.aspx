@@ -31,7 +31,7 @@
                     <div class="form-group">
                         <label>Lượt truy cập chung</label>
                         <input type="text" name="txtHitcouter" id="txtHitcouter" runat="server" onblur="this.value=formatNumeric(this.value);"
-                            maxlength="20" class="form-control" value="1" />
+                            maxlength="20" class="form-control" value="1" style="width:500px" />
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Vui lòng nhập Lượt truy cập chung"
                             Text="Vui lòng nhập Lượt truy cập chung" ControlToValidate="txtHitcouter" CssClass="errormes"></asp:RequiredFieldValidator>
                     </div>

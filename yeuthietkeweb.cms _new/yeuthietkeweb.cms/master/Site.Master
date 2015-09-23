@@ -33,7 +33,7 @@
         {
             font-size:12px;
         }
-        table input
+        table input[type="text"]
         {
             min-height:21px
         }
