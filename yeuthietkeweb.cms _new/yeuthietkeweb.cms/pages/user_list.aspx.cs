@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
 using vpro.functions;
+using System.Web.UI.HtmlControls;
 
 namespace yeuthietkeweb.cms.pages
 {
-    public partial class group_list : System.Web.UI.Page
+    public partial class user_list : System.Web.UI.Page
     {
         #region Declare
 
@@ -17,7 +17,6 @@ namespace yeuthietkeweb.cms.pages
         dbShopDataContext DB = new dbShopDataContext();
 
         #endregion
-
         #region Page Events
 
         protected void Page_Load(object sender, EventArgs e)
@@ -41,18 +40,23 @@ namespace yeuthietkeweb.cms.pages
 
         public string getLink(object obj_id)
         {
-            return "groups.aspx?group_id=" + Utils.CStrDef(obj_id);
+            return "user.aspx?user_id=" + Utils.CStrDef(obj_id);
+        }
+
+        public string getUserActive(object User_Active)
+        {
+            return Utils.CIntDef(User_Active) == 0 ? "Chưa kích hoạt" : "Đã kích hoạt";
         }
 
         private void SearchResult()
         {
             try
             {
-                var AllList = (from g in DB.ESHOP_GROUPs select g).ToList();
+                var AllList = (from g in DB.ESHOP_USERs select g);
 
 
                 if (AllList.ToList().Count > 0)
-                    Session["GroupList"] = DataUtil.LINQToDataTable(AllList);
+                    Session["UserList"] = DataUtil.LINQToDataTable(AllList);
 
                 rptList.DataSource = AllList;
                 rptList.DataBind();
@@ -69,10 +73,9 @@ namespace yeuthietkeweb.cms.pages
         {
             try
             {
+                var g_delete = DB.GetTable<ESHOP_USER>().Where(g => g.USER_ID == _id);
 
-                var g_delete = DB.GetTable<ESHOP_GROUP>().Where(g => g.GROUP_ID == _id);
-
-                DB.ESHOP_GROUPs.DeleteAllOnSubmit(g_delete);
+                DB.ESHOP_USERs.DeleteAllOnSubmit(g_delete);
                 DB.SubmitChanges();
 
             }
@@ -82,7 +85,7 @@ namespace yeuthietkeweb.cms.pages
             }
             finally
             {
-                Response.Redirect("group_list.aspx");
+                Response.Redirect("user_list.aspx");
             }
         }
 
@@ -121,9 +124,9 @@ namespace yeuthietkeweb.cms.pages
                 }
 
                 //delete 
-                var g_delete = DB.GetTable<ESHOP_GROUP>().Where(g => items.Contains(g.GROUP_ID));
+                var g_delete = DB.GetTable<ESHOP_USER>().Where(g => items.Contains(g.USER_ID));
 
-                DB.ESHOP_GROUPs.DeleteAllOnSubmit(g_delete);
+                DB.ESHOP_USERs.DeleteAllOnSubmit(g_delete);
                 DB.SubmitChanges();
             }
             catch (Exception ex)
@@ -154,7 +157,7 @@ namespace yeuthietkeweb.cms.pages
                     if (check.Checked)
                     {
                         int _id = Utils.CIntDef(lblID.Text, 0);
-                        strLink = "groups.aspx?group_id=" + _id;
+                        strLink = "user.aspx?user_id=" + _id;
                         break;
                     }
                     i++;
@@ -170,24 +173,20 @@ namespace yeuthietkeweb.cms.pages
                 if (!string.IsNullOrEmpty(strLink))
                     Response.Redirect(strLink);
             }
-
         }
 
         #endregion
 
         #region Grid Events
-
         protected void rptList_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             Label lblID = (Label)e.Item.FindControl("lblID");
             int _id = Utils.CIntDef(lblID.Text, 0);
             if (((LinkButton)e.CommandSource).CommandName == "Delete")
             {
-                EventDelete(_id);
+                EventDelete(_id );
             }
         }
-
-
         #endregion
     }
 }

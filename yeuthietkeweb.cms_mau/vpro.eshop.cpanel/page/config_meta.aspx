@@ -46,7 +46,7 @@
                     <span class="user">*</span>Title
                 </th>
                 <td>
-                    <input type="text" name="txtSeoTitle" id="txtSeoTitle" runat="server" style="width: 500px;" />
+                    <input type="text" name="txtSeoTitle" id="txtSeoTitle" runat="server" class="form-control" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Vui lòng nhập Seo Title"
                         Text="Vui lòng nhập Seo Title" ControlToValidate="txtSeoTitle" CssClass="errormes"></asp:RequiredFieldValidator>
                 </td>
