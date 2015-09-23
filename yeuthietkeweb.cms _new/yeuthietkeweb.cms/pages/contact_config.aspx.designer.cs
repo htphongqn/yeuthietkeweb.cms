@@ -13,6 +13,24 @@ namespace yeuthietkeweb.cms.pages {
     public partial class contact_config {
         
         /// <summary>
+        /// lbtSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button lbtSave;
+        
+        /// <summary>
+        /// lbMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lbMessage;
+        
+        /// <summary>
         /// mrk control.
         /// </summary>
         /// <remarks>
@@ -38,23 +56,5 @@ namespace yeuthietkeweb.cms.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea mrk1;
-        
-        /// <summary>
-        /// lbMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lbMessage;
-        
-        /// <summary>
-        /// lbtSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button lbtSave;
     }
 }

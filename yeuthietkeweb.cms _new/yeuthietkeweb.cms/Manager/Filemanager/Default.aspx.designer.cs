@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace yeuthietkeweb.cms.pages {
+namespace Testtinymice.Filemanager {
     
     
-    public partial class contact_list {
+    public partial class Default {
         
         /// <summary>
-        /// lbtDelete control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtDelete;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// toggleSelect control.
+        /// FileUpload1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox toggleSelect;
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
-        /// rptList control.
+        /// Btupmulti control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptList;
+        protected global::System.Web.UI.WebControls.Button Btupmulti;
+        
+        /// <summary>
+        /// Rplistimg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Rplistimg;
     }
 }
