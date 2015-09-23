@@ -56,15 +56,15 @@
                                 <div class="form-group" style="margin-bottom:0">
                                     <label><asp:Literal ID="lbMessage" runat="server" Text=""></asp:Literal></label>
                                 </div>
-                                <asp:Button ID="lbtSave" runat="server" Text="Lưu" CssClass="btn btn-default"  ValidationGroup="g1" onclick="lbtSave_Click" />
-                                <asp:LinkButton ID="lbtSaveNew" runat="server" OnClick="lbtSaveNew_Click" CssClass="btn btn-default">
+                                <asp:Button ID="lbtSave" runat="server" Text="Lưu" CssClass="btn btn-default btn-success btn-sm"  ValidationGroup="g1" onclick="lbtSave_Click" />
+                                <asp:LinkButton ID="lbtSaveNew" runat="server" OnClick="lbtSaveNew_Click" CssClass="btn btn-default btn-success btn-sm">
                                     Lưu và thêm mới
                                 </asp:LinkButton>
                                 <asp:LinkButton ID="lbtDelete" runat="server" OnClick="lbtDelete_Click" OnClientClick="return confirm('Bạn có chắc chắn xóa không?');"
-                                    CssClass="btn btn-default" CausesValidation="false">
+                                    CssClass="btn btn-default btn-success btn-sm" CausesValidation="false">
                                         Xóa
                                 </asp:LinkButton>
-                                <asp:Button ID="btnBack" runat="server" CssClass="btn btn-default" Text="Trở lại" PostBackUrl="~/pages/online_list.aspx" />
+                                <asp:Button ID="btnBack" runat="server" CssClass="btn btn-default btn-success btn-sm" Text="Trở lại" PostBackUrl="~/pages/online_list.aspx" />
                                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" ShowSummary="False" ValidationGroup="g1" />
                             </form>
                         </div>
