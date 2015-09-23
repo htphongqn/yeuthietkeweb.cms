@@ -24,6 +24,13 @@
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+     <style type="text/css">
+        input[type="radio"]
+        {
+            margin: 4px 4px 4px 4px;    
+        }
+
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">

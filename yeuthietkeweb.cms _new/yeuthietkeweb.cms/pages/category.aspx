@@ -89,11 +89,21 @@
                     <input type="text" name="txtpageItem" id="txtpageItem" runat="server" onblur="this.value=formatNumeric(this.value);"
                         maxlength="4" value="12" class="form-control"/>
                 </div>
+                <div class="form-group">
+                    <label>Thứ tự</label>
+                    <input type="text" name="txtOrder" id="txtOrder" runat="server" onblur="this.value=formatNumeric(this.value);"
+                        maxlength="4" value="1" onkeyup="this.value=formatNumeric(this.value);" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Thứ tự trang chủ</label>
+                    <input type="text" name="txtOrderPeriod" id="txtOrderPeriod" runat="server" onblur="this.value=formatNumeric(this.value);"
+                        maxlength="4" value="1" onkeyup="this.value=formatNumeric(this.value);" class="form-control"/>
+                </div>
             </div>
         </div>
         <div class="panel panel-default">                             
             <div class="panel-heading">
-                Thông tin hiển thị
+                Tags seo
             </div>
             <div class="panel-body">
                 <div class="form-group">
@@ -171,17 +181,14 @@
                     <label>Ngôn ngữ</label>
                     <asp:RadioButtonList ID="rblLanguage" runat="server" RepeatColumns="2">
                     </asp:RadioButtonList>
-                </div>
-                <div class="form-group">
-                    <label>Thứ tự</label>
-                    <input type="text" name="txtOrder" id="txtOrder" runat="server" onblur="this.value=formatNumeric(this.value);"
-                        maxlength="4" value="1" onkeyup="this.value=formatNumeric(this.value);" class="form-control"/>
-                </div>
-                <div class="form-group">
-                    <label>Thứ tự trang chủ</label>
-                    <input type="text" name="txtOrderPeriod" id="txtOrderPeriod" runat="server" onblur="this.value=formatNumeric(this.value);"
-                        maxlength="4" value="1" onkeyup="this.value=formatNumeric(this.value);" class="form-control"/>
-                </div>
+                </div>                            
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Hình ảnh
+            </div>
+            <div class="panel-body">            
                 <div class="form-group" id="trUploadImage1" runat="server">
                     <label>Ảnh đại diện</label>
                     <input id="fileImage1" type="file" name="fileImage1" size="50" runat="server" class="form-control"/>
@@ -192,13 +199,13 @@
                     </asp:ImageButton>
                     <asp:HyperLink runat="server" ID="hplImage1" Target="_blank"></asp:HyperLink><br />
                     <img id="Image1" runat="server" />
-                </div>                                    
+                </div>
             </div>
         </div>
     </div>
 </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
-    <script src="../js/jquery.min.1.7.2.js" type="text/javascript"></script>
-    <script src="../js/JqueryCollapse/jquery.collapse.js" type="text/javascript"></script>
+<%--    <script src="../js/jquery.min.1.7.2.js" type="text/javascript"></script>
+    <script src="../js/JqueryCollapse/jquery.collapse.js" type="text/javascript"></script>--%>
 </asp:Content>
