@@ -99,7 +99,7 @@
                                                 </a>
                                             </td>
                                             <td class="center">
-                                                <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CAT_ID")) %>'><span class="glyphicon glyphicon-pencil"></span></a>
+                                                <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "EMAIL_ID")) %>'>Chỉnh sửa</a>
                                             </td>
                                         </tr>    
                                     </ItemTemplate>
