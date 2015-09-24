@@ -87,7 +87,7 @@
                                         <tr class="odd gradeX">
                                             <td>
                                                 <asp:Label ID="lblSTT" runat="server" EnableViewState="False" Text='<%# getOrder() %>'></asp:Label>
-                                                <asp:Label ID="lblID" runat="server" Text='<%# Eval("CAT_ID")%>' Visible="false"></asp:Label>
+                                                <asp:Label ID="lblID" runat="server" Text='<%# Eval("BANNER_ID")%>' Visible="false"></asp:Label>
                                             </td>
                                             <td>
                                                 <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "BANNER_ID")) %>'>
