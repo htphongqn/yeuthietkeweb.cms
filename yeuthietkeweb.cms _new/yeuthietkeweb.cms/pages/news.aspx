@@ -205,7 +205,7 @@
                         <input id="fileImage3" type="file" name="fileImage1" size="50" runat="server" class="form-control"/>
                     </div>
                     <div class="form-group" id="trImage3" runat="server">
-                        <asp:ImageButton ID="btnDelete3" runat="server" ImageUrl="../images/delete_icon.gif"
+                        <asp:ImageButton ID="btnDelete3" runat="server" ImageUrl="../images/icon_delete.png"
                             BorderWidth="0" Width="13px" OnClick="btnDelete3_Click" ToolTip="Xóa hình minh họa này">
                         </asp:ImageButton>
                         <asp:HyperLink runat="server" ID="hplImage3" Target="_blank"></asp:HyperLink><br />

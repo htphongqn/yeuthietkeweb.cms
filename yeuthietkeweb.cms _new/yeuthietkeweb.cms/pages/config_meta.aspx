@@ -73,7 +73,7 @@
                         <input id="fileImage1" type="file" name="fileImage1" size="50" runat="server" class="form-control">
                     </div>
                     <div class="form-group" id="trFile" runat="server">
-                        <asp:ImageButton ID="btnDelete1" runat="server" ImageUrl="../images/delete_icon.gif"
+                        <asp:ImageButton ID="btnDelete1" runat="server" ImageUrl="../images/icon_delete.png"
                             BorderWidth="0" Width="13px" OnClick="btnDelete1_Click" ToolTip="Xóa file đính kèm">
                         </asp:ImageButton>
                         <asp:HyperLink runat="server" ID="hplFile" Target="_blank"></asp:HyperLink><br />
@@ -88,7 +88,7 @@
                         <input id="fileImageBG" type="file" name="fileImageBG" size="50" runat="server" class="form-control">
                     </div>
                     <div class="form-group" id="trFileBG" runat="server">
-                        <asp:ImageButton ID="btnDeleteBG" runat="server" ImageUrl="../images/delete_icon.gif"
+                        <asp:ImageButton ID="btnDeleteBG" runat="server" ImageUrl="../images/icon_delete.png"
                             BorderWidth="0" Width="13px" CausesValidation="false" ToolTip="Xóa file đính kèm" OnClick="btnDeleteBG_Click">
                         </asp:ImageButton>
                         <asp:HyperLink runat="server" ID="hplFileBG" Target="_blank"></asp:HyperLink><br />
