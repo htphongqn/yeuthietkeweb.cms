@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Site.Master" AutoEventWireup="true" CodeBehind="contact_config.aspx.cs" Inherits="yeuthietkeweb.cms.pages.contact_config" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Site.Master" AutoEventWireup="true" CodeBehind="contact_config.aspx.cs" Inherits="yeuthietkeweb.cms.pages.contact_config" ValidateRequest="false"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentMain" runat="server">
