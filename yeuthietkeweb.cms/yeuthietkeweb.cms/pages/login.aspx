@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="dbShop.pages.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="yeuthietkeweb.cms.pages.login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <asp:Literal ID="ltrFavicon" runat="server" EnableViewState="false"></asp:Literal>
     <title>CMS V1.0</title>
 
     <!-- Bootstrap Core CSS -->
@@ -23,13 +23,6 @@
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
     <form id="form1" runat="server">
@@ -43,10 +36,10 @@
                     <div class="panel-body">
                             <fieldset>
                                 <div class="form-group">
-                                    <input id="txtUsername" runat="server" class="form-control" placeholder="Tên đăng nhập" name="username" type="text" autofocus>
+                                    <input name="txtUN" type="text" class="form-control" id="txtUN" runat="server" placeholder="Tên đăng nhập" autofocus/>
                                 </div>
                                 <div class="form-group">
-                                    <input id="txtPassword" runat="server" class="form-control" placeholder="Mật khẩu" name="password" type="password">
+                                    <input name="txtPW" type="password" class="form-control" id="txtPW" runat="server" placeholder="Mật khẩu"/>
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -56,9 +49,9 @@
                                 <!-- Change this to a button or input when using this as a form -->                   <div class="form-group">
                                     <label><asp:Literal ID="lbMessage" runat="server" Text=""></asp:Literal></label>
                                 </div>        
-                                <asp:LinkButton ID="lbkLogin" runat="server" 
+                                <asp:LinkButton ID="lbtLogin" runat="server" 
                                     CssClass="btn btn-lg btn-success btn-block" Text="Đăng nhập" 
-                                    onclick="lbkLogin_Click">
+                                    onclick="lbtLogin_Click">
                                 </asp:LinkButton>
                             </fieldset>
                     </div>
@@ -78,6 +71,14 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+    <script language="javascript">
+        function setfocus() {
+            var txtUN = document.getElementById("txtUN");
+            txtUN.focus();
+        }
+
+    </script>
     </form>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
     <script language="javascript">
-        window.location.href = "pages/index.aspx"
+        window.location.href = "pages/login.aspx"
     </script>
 </head>
 <body>

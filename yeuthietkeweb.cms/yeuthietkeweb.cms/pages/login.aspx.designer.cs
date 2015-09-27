@@ -13,6 +13,15 @@ namespace yeuthietkeweb.cms.pages {
     public partial class login {
         
         /// <summary>
+        /// ltrFavicon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrFavicon;
+        
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -22,22 +31,22 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtUsername control.
+        /// txtUN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUsername;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUN;
         
         /// <summary>
-        /// txtPassword control.
+        /// txtPW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPW;
         
         /// <summary>
         /// chkRemember control.
@@ -58,12 +67,12 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.WebControls.Literal lbMessage;
         
         /// <summary>
-        /// lbkLogin control.
+        /// lbtLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbkLogin;
+        protected global::System.Web.UI.WebControls.LinkButton lbtLogin;
     }
 }

@@ -33,6 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI">
+      <HintPath>..\..\yeuthietkeweb.cms_mau\vpro.eshop.cpanel\bin\ComponentArt.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Karpach.WebControls, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Karpach.WebControls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -50,8 +61,15 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="vpro.functions">
+      <HintPath>..\..\yeuthietkeweb.cms_mau\vpro.functions\bin\Debug\vpro.functions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Karpach.WebControls.dll" />
+    <Content Include="bin\yeuthietkeweb.cms.dll" />
+    <Content Include="bin\yeuthietkeweb.cms.pdb" />
     <Content Include="bower_components\bootstrap-social\bootstrap-social.css" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
@@ -475,27 +493,154 @@
     <Content Include="bower_components\raphael\license.txt" />
     <Content Include="bower_components\raphael\raphael-min.js" />
     <Content Include="bower_components\raphael\raphael.js" />
+    <Content Include="Calendar\calendarStyle.css" />
+    <Content Include="Calendar\images\btn_calendar.gif" />
+    <Content Include="Calendar\images\cal_nextMonth.gif" />
+    <Content Include="Calendar\images\cal_prevMonth.gif" />
+    <Content Include="Calendar\pickerAndCalendar.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="dist\css\sb-admin-2.css" />
     <Content Include="dist\css\timeline.css" />
     <Content Include="dist\js\sb-admin-2.js" />
+    <Content Include="images\delete_icon.gif" />
+    <Content Include="images\icon_delete.png" />
     <Content Include="js\flot-data.js" />
+    <Content Include="js\jquery.min.1.7.2.js" />
+    <Content Include="js\JqueryCollapse\jquery.collapse.js" />
+    <Content Include="js\JqueryCollapse\jquery.collapse_cookie_storage.js" />
+    <Content Include="js\JqueryCollapse\jquery.collapse_storage.js" />
     <Content Include="js\morris-data.js" />
+    <Content Include="js\TinymiceEditor.js" />
+    <Content Include="js\UtilitiesCpanel.js" />
+    <Content Include="Manager\Filemanager\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Manager\Filemanager\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Manager\Filemanager\bootstrap\css\bootstrap.css" />
+    <Content Include="Manager\Filemanager\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Manager\Filemanager\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Manager\Filemanager\bootstrap\js\bootstrap.js" />
+    <Content Include="Manager\Filemanager\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Manager\Filemanager\bootstrap\js\tiny_mce_popup.js" />
+    <Content Include="Manager\Filemanager\Default.aspx" />
     <Content Include="obj\Debug\UploadFileKetoan.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\UploadFileKetoan.dll" />
     <Content Include="obj\Debug\UploadFileKetoan.pdb" />
-    <Content Include="pages\change_password.aspx" />
-    <Content Include="pages\edit_user.aspx" />
-    <Content Include="pages\XXX\quan_ly.aspx" />
-    <Content Include="pages\XXX\ke_toan_vien.aspx" />
-    <Content Include="pages\user_type.aspx" />
-    <Content Include="pages\user_types.aspx" />
-    <Content Include="pages\delete_user.aspx" />
-    <Content Include="pages\XXX\giao_nhan.aspx" />
-    <Content Include="pages\index.aspx" />
+    <Content Include="pages\aditem.aspx" />
+    <Content Include="pages\aditem_list.aspx" />
+    <Content Include="pages\category.aspx" />
+    <Content Include="pages\category_list.aspx" />
+    <Content Include="pages\config_banner.aspx" />
+    <Content Include="pages\config_email.aspx" />
+    <Content Include="pages\config_email_list.aspx" />
+    <Content Include="pages\config_footer.aspx" />
+    <Content Include="pages\config_hitcouter.aspx" />
+    <Content Include="pages\config_meta.aspx" />
+    <Content Include="pages\contact_config.aspx" />
+    <Content Include="pages\contact_list.aspx" />
+    <Content Include="pages\default.aspx" />
+    <Content Include="pages\groups.aspx" />
+    <Content Include="pages\group_list.aspx" />
     <Content Include="pages\login.aspx" />
+    <Content Include="pages\logout.aspx" />
+    <Content Include="pages\news.aspx" />
+    <Content Include="pages\news_category.aspx" />
+    <Content Include="pages\news_editor.aspx" />
+    <Content Include="pages\news_images.aspx" />
+    <Content Include="pages\news_list.aspx" />
+    <Content Include="pages\online.aspx" />
+    <Content Include="pages\online_list.aspx" />
     <Content Include="pages\user.aspx" />
-    <Content Include="pages\users.aspx" />
+    <Content Include="pages\user_changepass.aspx" />
+    <Content Include="pages\user_list.aspx" />
+    <Content Include="tinymce\changelog.txt" />
+    <Content Include="tinymce\js\tinymce\license.txt" />
+    <Content Include="tinymce\js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\example\dialog.html" />
+    <Content Include="tinymce\js\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="tinymce\js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\responsivefilemanager\editor_plugin.js" />
+    <Content Include="tinymce\js\tinymce\plugins\responsivefilemanager\img\insertfile.gif" />
+    <Content Include="tinymce\js\tinymce\plugins\responsivefilemanager\plugin.js" />
+    <Content Include="tinymce\js\tinymce\plugins\responsivefilemanager\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="tinymce\js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\youtube\images\preview.png" />
+    <Content Include="tinymce\js\tinymce\plugins\youtube\images\youtube.png" />
+    <Content Include="tinymce\js\tinymce\plugins\youtube\includes\youTube.css" />
+    <Content Include="tinymce\js\tinymce\plugins\youtube\includes\youTube.js" />
+    <Content Include="tinymce\js\tinymce\plugins\youtube\plugin.js" />
+    <Content Include="tinymce\js\tinymce\plugins\youtube\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\youtube\youtube.aspx" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="tinymce\js\tinymce\themes\modern\theme.min.js" />
+    <Content Include="tinymce\js\tinymce\tinymce.min.js" />
+    <Content Include="tinymce\LICENSE.TXT" />
+    <Content Include="UIs\AccountTop.ascx" />
+    <Content Include="UIs\Header.ascx" />
+    <Content Include="UIs\MenuLeft.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -505,10 +650,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\CongtyRepo.cs" />
-    <Compile Include="App_Code\FileRepo.cs" />
-    <Compile Include="App_Code\UploadRepo.cs" />
-    <Compile Include="App_Code\UserTypeRepo.cs" />
+    <Compile Include="Calendar\pickerAndCalendar.ascx.cs">
+      <DependentUpon>pickerAndCalendar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar\pickerAndCalendar.ascx.designer.cs">
+      <DependentUpon>pickerAndCalendar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CpanelUtils.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -516,75 +665,124 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="master\Index.Master.cs">
-      <DependentUpon>Index.Master</DependentUpon>
+    <Compile Include="Manager\Filemanager\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="master\Index.Master.designer.cs">
-      <DependentUpon>Index.Master</DependentUpon>
+    <Compile Include="Manager\Filemanager\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\change_password.aspx.cs">
-      <DependentUpon>change_password.aspx</DependentUpon>
+    <Compile Include="master\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\change_password.aspx.designer.cs">
-      <DependentUpon>change_password.aspx</DependentUpon>
+    <Compile Include="master\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="pages\edit_user.aspx.cs">
-      <DependentUpon>edit_user.aspx</DependentUpon>
+    <Compile Include="pages\aditem.aspx.cs">
+      <DependentUpon>aditem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\edit_user.aspx.designer.cs">
-      <DependentUpon>edit_user.aspx</DependentUpon>
+    <Compile Include="pages\aditem.aspx.designer.cs">
+      <DependentUpon>aditem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\XXX\quan_ly.aspx.cs">
-      <DependentUpon>quan_ly.aspx</DependentUpon>
+    <Compile Include="pages\aditem_list.aspx.cs">
+      <DependentUpon>aditem_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\XXX\quan_ly.aspx.designer.cs">
-      <DependentUpon>quan_ly.aspx</DependentUpon>
+    <Compile Include="pages\aditem_list.aspx.designer.cs">
+      <DependentUpon>aditem_list.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\XXX\ke_toan_vien.aspx.cs">
-      <DependentUpon>ke_toan_vien.aspx</DependentUpon>
+    <Compile Include="pages\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\XXX\ke_toan_vien.aspx.designer.cs">
-      <DependentUpon>ke_toan_vien.aspx</DependentUpon>
+    <Compile Include="pages\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\user_type.aspx.cs">
-      <DependentUpon>user_type.aspx</DependentUpon>
+    <Compile Include="pages\category_list.aspx.cs">
+      <DependentUpon>category_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\user_type.aspx.designer.cs">
-      <DependentUpon>user_type.aspx</DependentUpon>
+    <Compile Include="pages\category_list.aspx.designer.cs">
+      <DependentUpon>category_list.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\user_types.aspx.cs">
-      <DependentUpon>user_types.aspx</DependentUpon>
+    <Compile Include="pages\config_banner.aspx.cs">
+      <DependentUpon>config_banner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\user_types.aspx.designer.cs">
-      <DependentUpon>user_types.aspx</DependentUpon>
+    <Compile Include="pages\config_banner.aspx.designer.cs">
+      <DependentUpon>config_banner.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\delete_user.aspx.cs">
-      <DependentUpon>delete_user.aspx</DependentUpon>
+    <Compile Include="pages\config_email.aspx.cs">
+      <DependentUpon>config_email.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\delete_user.aspx.designer.cs">
-      <DependentUpon>delete_user.aspx</DependentUpon>
+    <Compile Include="pages\config_email.aspx.designer.cs">
+      <DependentUpon>config_email.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\XXX\giao_nhan.aspx.cs">
-      <DependentUpon>giao_nhan.aspx</DependentUpon>
+    <Compile Include="pages\config_email_list.aspx.cs">
+      <DependentUpon>config_email_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\XXX\giao_nhan.aspx.designer.cs">
-      <DependentUpon>giao_nhan.aspx</DependentUpon>
+    <Compile Include="pages\config_email_list.aspx.designer.cs">
+      <DependentUpon>config_email_list.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="pages\config_footer.aspx.cs">
+      <DependentUpon>config_footer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="pages\config_footer.aspx.designer.cs">
+      <DependentUpon>config_footer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\config_hitcouter.aspx.cs">
+      <DependentUpon>config_hitcouter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\config_hitcouter.aspx.designer.cs">
+      <DependentUpon>config_hitcouter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\config_meta.aspx.cs">
+      <DependentUpon>config_meta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\config_meta.aspx.designer.cs">
+      <DependentUpon>config_meta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\contact_config.aspx.cs">
+      <DependentUpon>contact_config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\contact_config.aspx.designer.cs">
+      <DependentUpon>contact_config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\contact_list.aspx.cs">
+      <DependentUpon>contact_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\contact_list.aspx.designer.cs">
+      <DependentUpon>contact_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\groups.aspx.cs">
+      <DependentUpon>groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\groups.aspx.designer.cs">
+      <DependentUpon>groups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\group_list.aspx.cs">
+      <DependentUpon>group_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\group_list.aspx.designer.cs">
+      <DependentUpon>group_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -593,6 +791,67 @@
     <Compile Include="pages\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dbShop.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbShop.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\news_category.aspx.cs">
+      <DependentUpon>news_category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\news_category.aspx.designer.cs">
+      <DependentUpon>news_category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\news_editor.aspx.cs">
+      <DependentUpon>news_editor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\news_editor.aspx.designer.cs">
+      <DependentUpon>news_editor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\news_images.aspx.cs">
+      <DependentUpon>news_images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\news_images.aspx.designer.cs">
+      <DependentUpon>news_images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\news_list.aspx.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\news_list.aspx.designer.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\online.aspx.cs">
+      <DependentUpon>online.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\online.aspx.designer.cs">
+      <DependentUpon>online.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\online_list.aspx.cs">
+      <DependentUpon>online_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\online_list.aspx.designer.cs">
+      <DependentUpon>online_list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\user.aspx.cs">
       <DependentUpon>user.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -600,22 +859,49 @@
     <Compile Include="pages\user.aspx.designer.cs">
       <DependentUpon>user.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\users.aspx.cs">
-      <DependentUpon>users.aspx</DependentUpon>
+    <Compile Include="pages\user_changepass.aspx.cs">
+      <DependentUpon>user_changepass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\users.aspx.designer.cs">
-      <DependentUpon>users.aspx</DependentUpon>
+    <Compile Include="pages\user_changepass.aspx.designer.cs">
+      <DependentUpon>user_changepass.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dbShop.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbShop.dbml</DependentUpon>
+    <Compile Include="pages\user_list.aspx.cs">
+      <DependentUpon>user_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Code\Security.cs" />
-    <Compile Include="App_Code\UserRepo.cs" />
-    <Compile Include="App_Code\Utils.cs" />
+    <Compile Include="pages\user_list.aspx.designer.cs">
+      <DependentUpon>user_list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tinymce\js\tinymce\plugins\youtube\youtube.aspx.cs">
+      <DependentUpon>youtube.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tinymce\js\tinymce\plugins\youtube\youtube.aspx.designer.cs">
+      <DependentUpon>youtube.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\AccountTop.ascx.cs">
+      <DependentUpon>AccountTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\AccountTop.ascx.designer.cs">
+      <DependentUpon>AccountTop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\MenuLeft.ascx.cs">
+      <DependentUpon>MenuLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIs\MenuLeft.ascx.designer.cs">
+      <DependentUpon>MenuLeft.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="bower_components\bootstrap-social\.bower.json" />
@@ -926,22 +1212,37 @@
     <None Include="bower_components\morrisjs\spec\viz\run.sh" />
     <None Include="bower_components\raphael\.bower.json" />
     <None Include="bower_components\raphael\bower.json" />
+    <None Include="Calendar\images\vssver2.scc" />
+    <None Include="js\JqueryCollapse\vssver2.scc" />
     <None Include="less\mixins.less" />
     <None Include="less\sb-admin-2.less" />
     <None Include="less\variables.less" />
-    <Content Include="master\Index.Master" />
+    <Content Include="master\Site.Master" />
+    <None Include="Manager\Filemanager\bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="Manager\Filemanager\bootstrap\css\bootstrap.css.map" />
+    <None Include="Manager\Filemanager\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Manager\Filemanager\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Manager\Filemanager\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="dbShop.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>dbShop.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="tinymce\js\tinymce\langs\readme.md" />
+    <None Include="tinymce\js\tinymce\plugins\youtube\images\Thumbs.db" />
+    <None Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <None Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <None Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <None Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <None Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <None Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.woff" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\" />
+    <Folder Include="App_Code\" />
     <Folder Include="Files\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
@@ -958,7 +1259,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4607</DevelopmentServerPort>
+          <DevelopmentServerPort>46901</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

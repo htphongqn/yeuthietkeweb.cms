@@ -165,6 +165,11 @@ div.dataTables_scrollHead table.table-bordered {
 	color: white;
 }
 
+.table .center
+{
+    text-align:center;
+    }
+
 .table-striped.dataTable tbody tr.active:nth-child(odd) td,
 .table-striped.dataTable tbody tr.active:nth-child(odd) th {
 	background-color: #017ebc;

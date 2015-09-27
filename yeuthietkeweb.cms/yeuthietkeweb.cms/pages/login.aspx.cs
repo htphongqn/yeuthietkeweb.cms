@@ -4,47 +4,108 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using vpro.functions;
 
 namespace yeuthietkeweb.cms.pages
 {
     public partial class login : System.Web.UI.Page
     {
-        private UserRepo _UserRepo = new UserRepo();
+        #region Declare
+
+        dbShopDataContext DB = new dbShopDataContext();
+
+        #endregion
+
+        #region Form Events
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
-                if (Request.QueryString["status"] == "logout")
-                    Session.Abandon();
+                //Session.Remove("USER_ID");
+                //Session.Remove("USER_UN");
+                //Session.Remove("USER_NAME");
+                //Session.Remove("GROUP_ID");
+                //Session.Remove("GROUP_TYPE");
+
+                txtUN.Attributes.Add("onKeyPress", Common.getSubmitScript(lbtLogin.ClientID));
+                txtPW.Attributes.Add("onKeyPress", Common.getSubmitScript(lbtLogin.ClientID));
+
+                var _configs = DB.GetTable<ESHOP_CONFIG>().OrderBy(c => c.CONFIG_ID).Take(1);
+
+                if (_configs.ToList().Count > 0)
+                {
+                    if (!string.IsNullOrEmpty(_configs.ToList()[0].CONFIG_FAVICON))
+                        ltrFavicon.Text = "<link rel='shortcut icon' href='" + PathFiles.GetPathConfigs() + _configs.ToList()[0].CONFIG_FAVICON + "' />";
+                }
             }
         }
-        protected void lbkLogin_Click(object sender, EventArgs e)
+
+        #endregion
+
+        #region Button
+
+        protected void lbtLogin_Click(object sender, EventArgs e)
         {
-            var item = _UserRepo.GetByUsername(txtUsername.Value);
-            if (item != null)
+            string strLink = "";
+
+            try
             {
-                string password = Security.Encrypt(txtPassword.Value, item.Saft);
-                if (item.Password == password)
+                string strUn = Utils.CStrDef((txtUN.Value), "").ToUpper();
+                string strPW = Utils.CStrDef(txtPW.Value, "");
+
+                var login = DB.GetTable<ESHOP_USER>().Where(u => u.USER_UN == strUn);
+
+                if (login.ToList().Count <= 0)
                 {
-                    if (Utils.CBoolDef(item.IsActive, false))
-                    {
-                        Session["user"] = item;
-                        Response.Redirect("~/pages/Index.aspx");
-                    }
-                    else
-                    {
-                        lbMessage.Text = "Tài khoản này chưa được kích hoạt!";
-                    }
+                    lbMessage.Text = "Tài khoản đăng nhập không tồn tại.";
                 }
                 else
                 {
-                    lbMessage.Text = "Tên đăng nhập hoặc mật khẩu không đúng!";//sai pass
+                    //decode pass
+                    strPW = Common.Encrypt(strPW, Utils.CStrDef(login.ToList()[0].SALT));
+                    //kiem tra lai salt bi null
+
+                    if (login.ToList()[0].USER_PW != strPW)
+                    { lbMessage.Text = "Thông tin đăng nhập không hợp lệ."; }
+                    else if (login.ToList()[0].USER_ACTIVE == 0)
+                    { lbMessage.Text = "Tài khoản chưa được kích hoạt."; }
+                    else
+                    {
+                        Session["USER_ID"] = login.ToList()[0].USER_ID;
+                        Session["USER_UN"] = login.ToList()[0].USER_UN;
+                        Session["USER_NAME"] = login.ToList()[0].USER_NAME;
+                        Session["GROUP_ID"] = login.ToList()[0].GROUP_ID;
+                        Session["GROUP_TYPE"] = login.ToList()[0].ESHOP_GROUP.GROUP_TYPE;
+
+                        HttpContext.Current.Response.Cookies["PITM_NGUOIDUNG_INFO"]["PITM_USER_ID"] = Session["USER_ID"].ToString();
+                        HttpContext.Current.Response.Cookies["PITM_NGUOIDUNG_INFO"]["PITM_USER_UN"] = Session["USER_UN"].ToString();
+                        HttpContext.Current.Response.Cookies["PITM_NGUOIDUNG_INFO"]["PITM_USER_NAME"] = Session["USER_NAME"].ToString();
+                        HttpContext.Current.Response.Cookies["PITM_NGUOIDUNG_INFO"]["PITM_GROUP_ID"] = Session["GROUP_ID"].ToString();
+                        HttpContext.Current.Response.Cookies["PITM_NGUOIDUNG_INFO"]["PITM_GROUP_TYPE"] = Session["GROUP_TYPE"].ToString();
+                        HttpContext.Current.Response.Cookies["PITM_NGUOIDUNG_INFO"].Expires = DateTime.Now.AddDays(30);
+
+                        if (login.ToList()[0].ESHOP_GROUP.GROUP_TYPE == 1)
+                            strLink = "default.aspx";
+                        else if (login.ToList()[0].ESHOP_GROUP.GROUP_TYPE == 2)
+                            strLink = "news_list.aspx";
+                        else
+                            strLink = "login.aspx";
+                    }
                 }
+
             }
-            else
+            catch (Exception ex)
             {
-                lbMessage.Text = "Tên đăng nhập hoặc mật khẩu không đúng!";//sai user
+                clsVproErrorHandler.HandlerError(ex);
+            }
+            finally
+            {
+                if (!string.IsNullOrEmpty(strLink))
+                    Response.Redirect(strLink);
             }
         }
+
+        #endregion
     }
 }
