@@ -73,7 +73,7 @@
                         <asp:RadioButtonList ID="rblNewsType" runat="server" RepeatColumns="5" AutoPostBack="True" class="form-control"
                             OnSelectedIndexChanged="rblNewsType_SelectedIndexChanged">
                             <asp:ListItem Text="Tin tức" Value="0" Selected="True"></asp:ListItem>
-                            <%--<asp:ListItem Text="Dịch vụ" Value="1"></asp:ListItem>--%>
+                            <asp:ListItem Text="Sản phẩm" Value="1"></asp:ListItem>
                         </asp:RadioButtonList>
                     </div>
                     <div class="form-group">
