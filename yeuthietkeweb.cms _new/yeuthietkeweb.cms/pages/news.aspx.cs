@@ -496,7 +496,6 @@ namespace yeuthietkeweb.cms.pages
 
 
                             DB.SubmitChanges();
-
                             strLink = string.IsNullOrEmpty(strLink) ? "news_list.aspx" : strLink;
                         }
                     }
@@ -549,7 +548,6 @@ namespace yeuthietkeweb.cms.pages
 
                             fileImage3.PostedFile.SaveAs(fullpathfile);
                         }
-
                     }
                 }
                 else
@@ -649,7 +647,6 @@ namespace yeuthietkeweb.cms.pages
                                 //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
                                 c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
                                 DB.SubmitChanges();
-
                                 strLink = string.IsNullOrEmpty(strLink) ? "news_list.aspx" : strLink;
                             }
                         }
