@@ -42,6 +42,8 @@
         <a href="category_list.aspx" class="btn btn-default btn-success btn-sm">
             Quay lại
         </a>
+        <a href="#" id="Hyperseo_cate" runat="server" class="btn btn-default btn-success btn-sm"><span class="glyphicon glyphicon-pencil"
+                        aria-hidden="true"></span>&nbsp;Seo chuyên mục </a>
         <asp:Literal ID="lbMessage" runat="server" Text=""></asp:Literal>
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" ShowSummary="False" ValidationGroup="g1" />
     </div>
@@ -127,7 +129,7 @@
                     <textarea id="txtSeoDescription" runat="server" class="form-control"></textarea>
                 </div>
             </div>
-        </div>
+        </div>        
     </div>
     <div class="col-lg-6">   
         <div class="panel panel-default">                             
@@ -153,14 +155,16 @@
                     <label>Kiểu hiển thị</label>
                     <asp:RadioButtonList ID="rblCatType" runat="server" RepeatColumns="5">
                         <asp:ListItem Text="Tin tức" Value="0" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="Sản phẩm" Value="1"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
                 <div class="form-group">
                     <label>Vị trí</label>
-                    <asp:RadioButtonList ID="rblPos" runat="server" RepeatColumns="3">
-                        <asp:ListItem Selected="True" Text="Trên" Value="0"></asp:ListItem>
-                        <asp:ListItem Text="Trái" Value="1"></asp:ListItem>
-                        <asp:ListItem Text="Phải" Value="2"></asp:ListItem>
+                    <asp:RadioButtonList ID="rblPos" runat="server" RepeatColumns="4">
+                        <asp:ListItem Text="Trên" Value="0" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="Dưới" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="Chính" Value="2"></asp:ListItem>
+                        <asp:ListItem Text="Khác" Value="20"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
                 <div class="form-group">
@@ -177,7 +181,7 @@
                         <asp:ListItem Text="Có" Value="1"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="display:none">
                     <label>Ngôn ngữ</label>
                     <asp:RadioButtonList ID="rblLanguage" runat="server" RepeatColumns="2">
                     </asp:RadioButtonList>
@@ -190,15 +194,26 @@
             </div>
             <div class="panel-body">            
                 <div class="form-group" id="trUploadImage1" runat="server">
-                    <label>Ảnh đại diện</label>
+                    <label>Icon</label>
                     <input id="fileImage1" type="file" name="fileImage1" size="50" runat="server" class="form-control"/>
                 </div>
                 <div class="form-group" id="trImage1" runat="server">
                     <asp:ImageButton ID="btnDelete1" runat="server" ImageUrl="../images/icon_delete.png"
-                        BorderWidth="0" Width="13px" OnClick="btnDelete1_Click" ToolTip="Xóa hình minh họa này">
+                        BorderWidth="0" Width="13px" OnClick="btnDelete1_Click" ToolTip="Xóa icon này">
                     </asp:ImageButton>
                     <asp:HyperLink runat="server" ID="hplImage1" Target="_blank"></asp:HyperLink><br />
                     <img id="Image1" runat="server" />
+                </div>
+                <div class="form-group" id="trUploadImage2" runat="server">
+                    <label>Ảnh đại diện</label>
+                    <input id="fileImage2" type="file" name="fileImage1" size="50" runat="server" class="form-control"/>
+                </div>
+                <div class="form-group" id="trImage2" runat="server">
+                    <asp:ImageButton ID="btnDelete2" runat="server" ImageUrl="../images/icon_delete.png"
+                        BorderWidth="0" Width="13px" OnClick="btnDelete2_Click" ToolTip="Xóa hình đại diện này">
+                    </asp:ImageButton>
+                    <asp:HyperLink runat="server" ID="hplImage2" Target="_blank"></asp:HyperLink><br />
+                    <img id="Image2" runat="server" />
                 </div>
             </div>
         </div>

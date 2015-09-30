@@ -406,8 +406,11 @@ namespace yeuthietkeweb.cms.pages
                 int id = Utils.CIntDef(ddlCategory.SelectedValue);
                 var list = (from a in DB.ESHOP_NEWs
                             join b in DB.ESHOP_NEWS_CATs on a.NEWS_ID equals b.NEWS_ID
-                            where b.CAT_ID == id
+                            join c in DB.ESHOP_CATEGORies on b.CAT_ID equals c.CAT_ID
+                            where (c.CAT_ID == id || c.CAT_PARENT_PATH.Contains(id.ToString()))
                             select a).OrderByDescending(n => n.NEWS_PUBLISHDATE).ToList();
+                Session["NewsList"] = DataUtil.LINQToDataTable(list);
+
                 rptList.DataSource = list;
                 rptList.DataBind();
             }
@@ -419,25 +422,13 @@ namespace yeuthietkeweb.cms.pages
         }
         protected void Change_nguon(object sender, EventArgs e)
         {
-            int N_ID = Utils.CIntDef(Ddnguon.SelectedValue, 0);
-            if (N_ID == 0)
-            {
-                var s = DB.ESHOP_NEWs.Where(n => n.NEWS_TYPE == 0).ToList();
-                if (s.Count > 0)
-                    Session["ProList"] = DataUtil.LINQToDataTable(s);
+            int N_ID = Utils.CIntDef(Ddnguon.SelectedValue, -1);
+            var s = DB.ESHOP_NEWs.Where(n => n.NEWS_TYPE == N_ID || N_ID == -1).ToList();
+            if (s.Count > 0)
+                Session["NewsList"] = DataUtil.LINQToDataTable(s);
 
-                rptList.DataSource = s;
-                rptList.DataBind();
-            }
-            else
-            {
-                var s = DB.ESHOP_NEWs.Where(n => n.NEWS_TYPE == 1).ToList();
-                if (s.Count > 0)
-                    Session["ProList"] = DataUtil.LINQToDataTable(s);
-
-                rptList.DataSource = s;
-                rptList.DataBind();
-            }
+            rptList.DataSource = s;
+            rptList.DataBind();
         }
     }
 }

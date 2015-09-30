@@ -17,7 +17,7 @@ namespace yeuthietkeweb.cms.pages
         private int m_cat_id = 0;
         int _count = 0;
         dbShopDataContext DB = new dbShopDataContext();
-
+        string m_pathFile = "";
         #endregion
 
         #region form event
@@ -30,9 +30,10 @@ namespace yeuthietkeweb.cms.pages
             {
                 lbtDelete.Visible = false;
                 trImage1.Visible = false;
-                //trImage2.Visible = false;
+                trImage2.Visible = false;
+                Hyperseo_cate.Visible = false;
             }
-
+            else Hyperseo_cate.HRef = "category_seo.aspx?cat_id=" + m_cat_id;
             if (!IsPostBack)
             {
                 getInfo();
@@ -308,20 +309,20 @@ namespace yeuthietkeweb.cms.pages
                         trImage1.Visible = false;
                     }
 
-                    ////image 2
-                    //if (!string.IsNullOrEmpty(G_info.ToList()[0].CAT_IMAGE2))
-                    //{
-                    //    trUploadImage2.Visible = false;
-                    //    trImage2.Visible = true;
-                    //    Image2.Src = PathFiles.GetPathCategory(m_cat_id) + G_info.ToList()[0].CAT_IMAGE2;
-                    //    hplImage2.NavigateUrl = PathFiles.GetPathCategory(m_cat_id) + G_info.ToList()[0].CAT_IMAGE2;
-                    //    hplImage2.Text = G_info.ToList()[0].CAT_IMAGE2;
-                    //}
-                    //else
-                    //{
-                    //    trUploadImage2.Visible = true;
-                    //    trImage2.Visible = false;
-                    //}
+                    //image 2
+                    if (!string.IsNullOrEmpty(G_info.ToList()[0].CAT_IMAGE2))
+                    {
+                        trUploadImage2.Visible = false;
+                        trImage2.Visible = true;
+                        Image2.Src = PathFiles.GetPathCategory(m_cat_id) + G_info.ToList()[0].CAT_IMAGE2;
+                        hplImage2.NavigateUrl = PathFiles.GetPathCategory(m_cat_id) + G_info.ToList()[0].CAT_IMAGE2;
+                        hplImage2.Text = G_info.ToList()[0].CAT_IMAGE2;
+                    }
+                    else
+                    {
+                        trUploadImage2.Visible = true;
+                        trImage2.Visible = false;
+                    }
 
                     ////image 3
                     //if (!string.IsNullOrEmpty(G_info.ToList()[0].CAT_IMAGE3))
@@ -422,24 +423,24 @@ namespace yeuthietkeweb.cms.pages
                     Cat_Image1 = hplImage1.Text;
                 }
 
-                ////get image2
-                //string Cat_Image2;
+                //get image2
+                string Cat_Image2;
 
-                //if (trUploadImage2.Visible == true)
-                //{
-                //    if (fileImage2.PostedFile != null)
-                //    {
-                //        Cat_Image2 = Path.GetFileName(fileImage2.PostedFile.FileName);
-                //    }
-                //    else
-                //    {
-                //        Cat_Image2 = "";
-                //    }
-                //}
-                //else
-                //{
-                //    Cat_Image2 = hplImage2.Text;
-                //}
+                if (trUploadImage2.Visible == true)
+                {
+                    if (fileImage2.PostedFile != null)
+                    {
+                        Cat_Image2 = Path.GetFileName(fileImage2.PostedFile.FileName);
+                    }
+                    else
+                    {
+                        Cat_Image2 = "";
+                    }
+                }
+                else
+                {
+                    Cat_Image2 = hplImage2.Text;
+                }
 
                 ////get image3
                 //string Cat_Image3;
@@ -493,7 +494,7 @@ namespace yeuthietkeweb.cms.pages
                     cat_insert.CAT_RANK = Cat_Rank;
 
                     cat_insert.CAT_IMAGE1 = Cat_Image1;
-                    //cat_insert.CAT_IMAGE2 = Cat_Image2;
+                    cat_insert.CAT_IMAGE2 = Cat_Image2;
                     //cat_insert.CAT_IMAGE3 = Cat_Image3;
 
                     //cat_insert.CAT_CODE_EN = Cat_Code_En;
@@ -549,7 +550,7 @@ namespace yeuthietkeweb.cms.pages
                         c_update.Single().CAT_RANK = Cat_Rank;
 
                         c_update.Single().CAT_IMAGE1 = Cat_Image1;
-                        //c_update.Single().CAT_IMAGE2 = Cat_Image2;
+                        c_update.Single().CAT_IMAGE2 = Cat_Image2;
                         //c_update.Single().CAT_IMAGE3 = Cat_Image3;
 
                         //c_update.Single().CAT_CODE_EN = Cat_Code_En;
@@ -571,7 +572,7 @@ namespace yeuthietkeweb.cms.pages
                 {
                     if (!string.IsNullOrEmpty(fileImage1.PostedFile.FileName))
                     {
-                        string pathfile = Server.MapPath("../data/categories/" + m_cat_id);
+                        string pathfile = Server.MapPath("/data/categories/" + m_cat_id);
                         string fullpathfile = pathfile + "/" + Cat_Image1;
 
                         if (!Directory.Exists(pathfile))
@@ -584,23 +585,23 @@ namespace yeuthietkeweb.cms.pages
 
                 }
 
-                ////update images 2
-                //if (trUploadImage2.Visible)
-                //{
-                //    if (!string.IsNullOrEmpty(fileImage2.PostedFile.FileName))
-                //    {
-                //        string pathfile = Server.MapPath("../data/categories/" + m_cat_id);
-                //        string fullpathfile = pathfile + "/" + Cat_Image2;
+                //update images 2
+                if (trUploadImage2.Visible)
+                {
+                    if (!string.IsNullOrEmpty(fileImage2.PostedFile.FileName))
+                    {
+                        string pathfile = Server.MapPath("/data/categories/" + m_cat_id);
+                        string fullpathfile = pathfile + "/" + Cat_Image2;
 
-                //        if (!Directory.Exists(pathfile))
-                //        {
-                //            Directory.CreateDirectory(pathfile);
-                //        }
+                        if (!Directory.Exists(pathfile))
+                        {
+                            Directory.CreateDirectory(pathfile);
+                        }
 
-                //        fileImage2.PostedFile.SaveAs(fullpathfile);
-                //    }
+                        fileImage2.PostedFile.SaveAs(fullpathfile);
+                    }
 
-                //}
+                }
 
                 //if (trUploadImage3.Visible)
                 //{
@@ -618,7 +619,7 @@ namespace yeuthietkeweb.cms.pages
                 //    }
 
                 //}
-
+                
             }
             catch (Exception ex)
             {
@@ -695,5 +696,6 @@ namespace yeuthietkeweb.cms.pages
         }
 
         #endregion
+        
     }
 }

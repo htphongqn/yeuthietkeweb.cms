@@ -130,24 +130,6 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtOrder;
         
         /// <summary>
-        /// ucFromDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::yeuthietkeweb.cms.Calendar.WebUserControl1 ucFromDate;
-        
-        /// <summary>
-        /// ucToDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::yeuthietkeweb.cms.Calendar.WebUserControl1 ucToDate;
-        
-        /// <summary>
         /// rblLanguage control.
         /// </summary>
         /// <remarks>

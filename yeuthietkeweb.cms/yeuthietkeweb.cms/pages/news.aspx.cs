@@ -33,7 +33,7 @@ namespace yeuthietkeweb.cms.pages
             {
                 lbtDelete.Visible = false;
                 //trImage1.Visible = false;
-                //trNewsFunction.Visible = false;
+                trNewsFunction.Visible = false;
                 trImage3.Visible = false;
             }
             else
@@ -184,7 +184,24 @@ namespace yeuthietkeweb.cms.pages
                 clsVproErrorHandler.HandlerError(ex);
             }
         }
+        //private void LoadBrands()
+        //{
+        //    try
+        //    {
+        //        var units = DB.GetTable<ESHOP_BRAND>();
 
+        //        ddlBrand.DataSource = units;
+        //        ddlBrand.DataTextField = "NAME";
+        //        ddlBrand.DataValueField = "ID";
+        //        ddlBrand.DataBind();
+
+        //        ddlBrand.Items.Insert(0, new ListItem("--------Thương hiệu--------", "0"));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        clsVproErrorHandler.HandlerError(ex);
+        //    }
+        //}
         //private void LoadUnits()
         //{
         //    try
@@ -247,7 +264,7 @@ namespace yeuthietkeweb.cms.pages
                     //txtPriceSub.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE1));
                     //TextBox1.Text = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE3));
                     //txtgiamgia.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE2));
-                    //drNhanHieu.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.UNIT_ID1);
+                    //ddlBrand.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.UNIT_ID1);
 
                     rblNewsType.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_TYPE);
                     rblStatus.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_SHOWTYPE);
@@ -424,7 +441,7 @@ namespace yeuthietkeweb.cms.pages
                         news_insert.NEWS_SEO_KEYWORD = txtSeoKeyword.Value;
                         news_insert.NEWS_SEO_DESC = txtSeoDescription.Value;
 
-                        //news_insert.UNIT_ID1 = Utils.CIntDef(drNhanHieu.SelectedValue);
+                        //news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
                         news_insert.NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                         news_insert.NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
                         news_insert.NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);
@@ -486,7 +503,7 @@ namespace yeuthietkeweb.cms.pages
                             c_update.ToList()[0].NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                             c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                             c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-
+                            //c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
                             //c_update.ToList()[0].UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
 
                             //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
@@ -496,6 +513,7 @@ namespace yeuthietkeweb.cms.pages
 
 
                             DB.SubmitChanges();
+
                             strLink = string.IsNullOrEmpty(strLink) ? "news_list.aspx" : strLink;
                         }
                     }
@@ -548,6 +566,7 @@ namespace yeuthietkeweb.cms.pages
 
                             fileImage3.PostedFile.SaveAs(fullpathfile);
                         }
+
                     }
                 }
                 else
@@ -570,7 +589,7 @@ namespace yeuthietkeweb.cms.pages
                             news_insert.NEWS_SEO_KEYWORD = txtSeoKeyword.Value;
                             news_insert.NEWS_SEO_DESC = txtSeoDescription.Value;
 
-                            //news_insert.UNIT_ID1 = Utils.CIntDef(drNhanHieu.SelectedValue);
+                            //news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
 
                             news_insert.NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                             news_insert.NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
@@ -640,6 +659,7 @@ namespace yeuthietkeweb.cms.pages
                                 c_update.ToList()[0].NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                                 c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                                 c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
+                                //c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
                                 //c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPriceSub.Value);
                                 //c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtgiamgia.Value);
                                 //c_update.ToList()[0].NEWS_PRICE3 = Utils.CDecDef(TextBox1.Text);
@@ -647,6 +667,7 @@ namespace yeuthietkeweb.cms.pages
                                 //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
                                 c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
                                 DB.SubmitChanges();
+
                                 strLink = string.IsNullOrEmpty(strLink) ? "news_list.aspx" : strLink;
                             }
                         }
