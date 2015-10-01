@@ -49,6 +49,7 @@ namespace yeuthietkeweb.cms.pages
 
             if (!IsPostBack)
             {
+                //LoadBrands();
                 getInfo();
                 LoadCategoryParent();
 
@@ -247,12 +248,12 @@ namespace yeuthietkeweb.cms.pages
 
                     if (G_info.ToList()[0].n.NEWS_TYPE == 0)
                     {
-                        //dvProductDetails.Visible = dvPrice.Visible = false;
+                        div_price.Visible = false;
 
                     }
                     else
                     {
-                        //dvProductDetails.Visible = dvPrice.Visible = true;
+                        div_price.Visible = true;
 
                     }
                     //trCat.Visible = false;
@@ -261,10 +262,10 @@ namespace yeuthietkeweb.cms.pages
                     txtDesc.Value = G_info.ToList()[0].n.NEWS_DESC;
                     txtUrl.Value = G_info.ToList()[0].n.NEWS_URL;
                     ddlTarget.SelectedValue = G_info.ToList()[0].n.NEWS_TARGET;
-                    //txtPriceSub.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE1));
+                    txtPrice.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE1));
                     //TextBox1.Text = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE3));
                     //txtgiamgia.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE2));
-                    //ddlBrand.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.UNIT_ID1);
+                    ddlBrand.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.UNIT_ID1);
 
                     rblNewsType.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_TYPE);
                     rblStatus.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_SHOWTYPE);
@@ -441,7 +442,7 @@ namespace yeuthietkeweb.cms.pages
                         news_insert.NEWS_SEO_KEYWORD = txtSeoKeyword.Value;
                         news_insert.NEWS_SEO_DESC = txtSeoDescription.Value;
 
-                        //news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                        news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
                         news_insert.NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                         news_insert.NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
                         news_insert.NEWS_PERIOD = Utils.CIntDef(rblNewsPeriod.SelectedValue);
@@ -454,7 +455,7 @@ namespace yeuthietkeweb.cms.pages
                         news_insert.NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
 
                         //news_insert.UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
-
+                        news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
                         //news_insert.NEWS_IMAGE1 = News_Image1;
                         //news_insert.NEWS_IMAGE2 = News_Image2;
                         news_insert.NEWS_IMAGE3 = News_Image3;
@@ -503,8 +504,9 @@ namespace yeuthietkeweb.cms.pages
                             c_update.ToList()[0].NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                             c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                             c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                            //c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                            c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
                             //c_update.ToList()[0].UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
+                            c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
 
                             //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
                             //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
@@ -589,7 +591,7 @@ namespace yeuthietkeweb.cms.pages
                             news_insert.NEWS_SEO_KEYWORD = txtSeoKeyword.Value;
                             news_insert.NEWS_SEO_DESC = txtSeoDescription.Value;
 
-                            //news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                            news_insert.UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
 
                             news_insert.NEWS_TYPE = Utils.CIntDef(rblNewsType.SelectedValue);
                             news_insert.NEWS_SHOWTYPE = Utils.CIntDef(rblStatus.SelectedValue);
@@ -601,7 +603,7 @@ namespace yeuthietkeweb.cms.pages
                             news_insert.NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                             news_insert.NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                             news_insert.NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                            //news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPriceSub.Value);
+                            news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
                             //news_insert.NEWS_PRICE3 = Utils.CDecDef(TextBox1.Text);
                             //news_insert.NEWS_PRICE2 = Utils.CDecDef(txtgiamgia.Value);
                             //news_insert.UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
@@ -659,8 +661,8 @@ namespace yeuthietkeweb.cms.pages
                                 c_update.ToList()[0].NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                                 c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                                 c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                                //c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
-                                //c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPriceSub.Value);
+                                c_update.ToList()[0].UNIT_ID1 = Utils.CIntDef(ddlBrand.SelectedValue);
+                                c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
                                 //c_update.ToList()[0].NEWS_PRICE2 = Utils.CDecDef(txtgiamgia.Value);
                                 //c_update.ToList()[0].NEWS_PRICE3 = Utils.CDecDef(TextBox1.Text);
                                 //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
@@ -947,10 +949,10 @@ namespace yeuthietkeweb.cms.pages
                 switch (_iType)
                 {
                     case 0:
-                        //dvProductDetails.Visible = dvPrice.Visible = false;
+                        div_price.Visible = false;
                         break;
                     case 1:
-                        //dvProductDetails.Visible = dvPrice.Visible = true;
+                        div_price.Visible = true;
 
                         break;
                     default:

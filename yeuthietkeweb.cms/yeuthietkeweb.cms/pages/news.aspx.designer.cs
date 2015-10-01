@@ -175,6 +175,15 @@ namespace yeuthietkeweb.cms.pages {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDesc;
         
         /// <summary>
+        /// ddlBrand control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlBrand;
+        
+        /// <summary>
         /// txtUrl control.
         /// </summary>
         /// <remarks>
@@ -308,6 +317,24 @@ namespace yeuthietkeweb.cms.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblShowDetail;
+        
+        /// <summary>
+        /// div_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_price;
+        
+        /// <summary>
+        /// txtPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrice;
         
         /// <summary>
         /// trUploadImage3 control.
