@@ -50,7 +50,7 @@ namespace yeuthietkeweb.cms.pages
 
             if (!IsPostBack)
             {
-                LoadBrands();
+                //LoadBrands();
                 getInfo();
                 LoadCategoryParent();
 
@@ -186,24 +186,24 @@ namespace yeuthietkeweb.cms.pages
                 clsVproErrorHandler.HandlerError(ex);
             }
         }
-        private void LoadBrands()
-        {
-            try
-            {
-                var units = DB.GetTable<ESHOP_BRAND>();
+        //private void LoadBrands()
+        //{
+        //    try
+        //    {
+        //        var units = DB.GetTable<ESHOP_BRAND>();
 
-                ddlBrand.DataSource = units;
-                ddlBrand.DataTextField = "NAME";
-                ddlBrand.DataValueField = "ID";
-                ddlBrand.DataBind();
+        //        ddlBrand.DataSource = units;
+        //        ddlBrand.DataTextField = "NAME";
+        //        ddlBrand.DataValueField = "ID";
+        //        ddlBrand.DataBind();
 
-                ddlBrand.Items.Insert(0, new ListItem("--------Thương hiệu--------", "0"));
-            }
-            catch (Exception ex)
-            {
-                clsVproErrorHandler.HandlerError(ex);
-            }
-        }
+        //        ddlBrand.Items.Insert(0, new ListItem("--------Thương hiệu--------", "0"));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        clsVproErrorHandler.HandlerError(ex);
+        //    }
+        //}
         //private void LoadUnits()
         //{
         //    try
