@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Toolbar.ascx.cs" Inherits="GiaNguyen.UIs.Toolbar" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="toolbar.ascx.cs" Inherits="GiaNguyen.UIs.Toolbar" %>
 
 <%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc2" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc3" %>
@@ -54,13 +54,13 @@
                             Mã an toàn:<span class="required">*</span></label>
                         <div class="col1 right_col1">                            
                             <script type="text/javascript"  language="Javascript">
-                                function Catpc() {
-                                    var img = document.getElementById("icp");
-                                    img.src = "/Resources/captchr.ashx?query=" + Math.random();
+                                function CatpcSent() {
+                                    var img = document.getElementById("icpSent");
+                                    img.src = "/Pages/captchr.ashx?query=" + Math.random();
                                 }
                             </script>                    
-                            <img id="icp" align="absmiddle" src='/Resources/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
-                            <a href="javascript:void(0)" onclick="javascript:Catpc();">
+                            <img id="icpSent" align="absmiddle" src='/Pages/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
+                            <a href="javascript:void(0)" onclick="javascript:CatpcSent();">
                                 <img title="Refresh" style="vertical-align: middle;border-width:0px" src="/Resources/images/reloadpaf.png" /></a>
                             <input name="txtCapcha" id="txtCapcha" runat="server" type="text" class="inputbox"
                                 style="width: 100px;" />
@@ -175,10 +175,10 @@
                                     <script type="text/javascript"  language="Javascript">
                                         function Catpc2() {
                                             var img = document.getElementById("icp2");
-                                            img.src = "/Resources/captchr.ashx?query=" + Math.random();
+                                            img.src = "/Pages/captchr.ashx?query=" + Math.random();
                                         }
                                 </script>                    
-                                <img id="icp2" align="absmiddle" src='/Resources/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
+                                <img id="icp2" align="absmiddle" src='/Pages/captchr.ashx?query=<%= querys() %>' alt="Mã  an toàn" />
                                 <a href="javascript:void(0)" onclick="javascript:Catpc2();">
                                     <img title="Refresh" style="vertical-align: middle;border-width:0px" src="/Resources/images/reloadpaf.png" /></a>
                                 </div>

@@ -54,8 +54,8 @@ namespace yeuthietkeweb.cms.Components
             List<string[]> l = new List<string[]> 
             { 
                 new string[] { "0", "Slideshow" }, 
-                new string[] { "1", "Trái" },
-                new string[] { "2", "Phải" },
+                new string[] { "1", "Góc Phải" },
+                new string[] { "2", "Hổ trợ đặt hàng" },
             };
 
             rbl.DataSource = from obj in l
@@ -241,6 +241,19 @@ namespace yeuthietkeweb.cms.Components
             SourceString = Regex.Replace(SourceString, "[ỲÝỶỸỴỳýỵỷỹ]", "y");
             SourceString = Regex.Replace(SourceString, "[đĐ]", "d");
             return SourceString;
+        }
+        public static string FormatMoney(object Expression)
+        {
+            try
+            {
+                string Money = String.Format("{0:0,#}", Expression);
+                return Money;
+            }
+            catch (Exception ex)
+            {
+                clsVproErrorHandler.HandlerError(ex);
+                return null;
+            }
         }
     }
 }
